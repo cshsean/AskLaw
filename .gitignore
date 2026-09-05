@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Tool artifacts
+.playwright-mcp/
+.serena/
+products-page.png
+
+# Node / build output (future)
+node_modules/
+dist/
+.next/
+.astro/
