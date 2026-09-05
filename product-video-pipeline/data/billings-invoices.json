@@ -1,0 +1,44 @@
+{
+  "slug": "billings-invoices",
+  "title": "Keeping track of client billings and invoices",
+  "category": "administrative",
+  "overviewCopy": "Billable time gets lost in the gaps between doing the work and writing it down — an email answered on the train, a five-minute call between hearings. PointOne reads your time entries, correspondence and calendar to draft the billing lines you'd otherwise forget, so nothing goes unbilled. A person still reviews and approves every line before a client ever sees an invoice.",
+  "videoScript": [
+    {
+      "scene": 1,
+      "type": "narration",
+      "narration": "Billable time has a habit of disappearing in the gaps — the email you answered on the train, the five-minute call between hearings, or the quick read-through of a filing before you forwarded it on.",
+      "visualIntent": "Icons representing emails, phone calls, and calendar events scatter off a daily timeline graphic to illustrate uncaptured time."
+    },
+    {
+      "scene": 2,
+      "type": "narration",
+      "narration": "PointOne reads your time entries, correspondence, and calendar metadata, pulling that scattered activity into draft invoice lines automatically without guessing at what happened.",
+      "visualIntent": "A conceptual flowchart shows data streams from inbox and calendar icons consolidating into organized line-item cards."
+    },
+    {
+      "scene": 3,
+      "type": "screen_recording",
+      "assetRef": "PLACEHOLDER_billings-invoices-demo.mp4",
+      "narration": "Here is how activity metadata is organized directly into draft lines for review."
+    },
+    {
+      "scene": 4,
+      "type": "narration",
+      "narration": "Nothing goes out to a client automatically. Every line PointOne drafts sits in a review queue where you check and adjust it — a firm policy step that should never be skipped for speed.",
+      "visualIntent": "A conceptual diagram shows draft items stopping at a mandatory human checkpoint icon before flowing into a final client invoice container."
+    },
+    {
+      "scene": 5,
+      "type": "narration",
+      "narration": "Most firms find PointOne catches more billable time than manual logging alone, simply because it doesn't rely on remembering everything at the end of a long day.",
+      "visualIntent": "A simple bar chart animation compares standard manual time logging against comprehensive automated capture."
+    }
+  ],
+  "videoAsset": {
+    "url": null,
+    "captionsUrl": null,
+    "generatedAt": null,
+    "sourceCopyHash": null
+  }
+}

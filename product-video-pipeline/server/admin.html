@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Video pipeline admin (pilot) — In Chambers</title>
+<style>
+  :root { color-scheme: light; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #f6f7f9; color: #1a1f2b; margin: 0; }
+  header { background: #fff; border-bottom: 1px solid #e2e5ea; padding: 20px 32px; }
+  header h1 { font-size: 18px; margin: 0; }
+  header p { margin: 4px 0 0; color: #5b6472; font-size: 13px; }
+  main { max-width: 880px; margin: 0 auto; padding: 32px; display: grid; gap: 24px; }
+  section { background: #fff; border: 1px solid #e2e5ea; border-radius: 12px; padding: 24px; }
+  h2 { font-size: 15px; margin: 0 0 16px; }
+  label { display: block; font-size: 13px; font-weight: 600; margin: 14px 0 6px; }
+  label:first-of-type { margin-top: 0; }
+  input[type="file"], textarea { width: 100%; box-sizing: border-box; font-family: inherit; font-size: 13px; }
+  textarea { min-height: 260px; font-family: ui-monospace, Consolas, monospace; padding: 10px; border: 1px solid #d6dae1; border-radius: 8px; }
+  .hint { color: #5b6472; font-size: 12px; margin-top: 4px; }
+  button { background: #1f4e8c; color: #fff; border: none; padding: 10px 20px; border-radius: 999px; font-size: 14px; font-weight: 600; cursor: pointer; }
+  button:disabled { background: #9aa5b3; cursor: not-allowed; }
+  button.secondary { background: transparent; color: #1f4e8c; border: 1px solid #1f4e8c; }
+  .warnings { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 12px 16px; font-size: 13px; margin-bottom: 16px; }
+  .warnings ul { margin: 4px 0 0; padding-left: 18px; }
+  pre#log { background: #0f1420; color: #d7dde6; padding: 16px; border-radius: 8px; font-size: 12px; max-height: 320px; overflow: auto; white-space: pre-wrap; }
+  video { width: 100%; border-radius: 8px; background: #000; }
+  .status { font-size: 13px; color: #5b6472; margin-top: 8px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Video pipeline admin — pilot</h1>
+  <p>Single-problem test bench for "Keeping track of client billings and invoices". Not part of the public site.</p>
+</header>
+
+<main>
+  <section id="uploadSection">
+    <h2>1. Upload inputs</h2>
+    <form id="prepareForm">
+      <label for="scriptFile">Script — plain text, what should be said</label>
+      <input type="file" id="scriptFile" name="scriptFile" accept="text/plain,.txt,.md" required />
+      <div class="hint">This is narration content, not a shot list — the scene structure (how it's split up, where the screen recording goes) is generated for you in the next step.</div>
+
+      <label for="demoVideo">Demonstration video (real screen recording)</label>
+      <input type="file" id="demoVideo" name="demoVideo" accept="video/*" />
+      <div class="hint">Replaces the placeholder for the generated screen-recording scene, per docs/video-pipeline-plan.md §3a.</div>
+
+      <label for="documents">Supporting documents</label>
+      <input type="file" id="documents" name="documents" multiple />
+      <div class="hint">Background/context (tool feature sheets, firm policy, etc.) — passed to script generation, not read verbatim as narration.</div>
+
+      <label for="directions">Directions / notes for the reviewer</label>
+      <textarea id="directions" name="directions" style="min-height:70px" placeholder="e.g. emphasise the human-review step more, mention the tool by name..."></textarea>
+
+      <div style="margin-top:18px">
+        <button type="submit" id="prepareBtn">Generate scene plan</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="reviewSection" hidden>
+    <h2>2. Review the script before rendering</h2>
+    <div id="warnings" class="warnings" hidden></div>
+    <label for="scriptText">Scene script (edit directly — this is the mandatory human review step)</label>
+    <textarea id="scriptText"></textarea>
+    <div style="margin-top:18px; display:flex; gap:10px; align-items:center;">
+      <button id="renderBtn">Confirm &amp; render</button>
+      <button type="button" class="secondary" id="editAgainBtn">Back to upload</button>
+      <span id="renderStatus" class="status"></span>
+    </div>
+  </section>
+
+  <section id="outputSection" hidden>
+    <h2>3. Output</h2>
+    <video id="outputVideo" controls></video>
+    <details style="margin-top:16px">
+      <summary style="cursor:pointer; font-size:13px; color:#5b6472;">Pipeline log</summary>
+      <pre id="log"></pre>
+    </details>
+  </section>
+</main>
+
+<script>
+  const uploadSection = document.getElementById('uploadSection');
+  const reviewSection = document.getElementById('reviewSection');
+  const outputSection = document.getElementById('outputSection');
+  const warningsBox = document.getElementById('warnings');
+  const scriptText = document.getElementById('scriptText');
+  const prepareForm = document.getElementById('prepareForm');
+  const prepareBtn = document.getElementById('prepareBtn');
+  const renderBtn = document.getElementById('renderBtn');
+  const renderStatus = document.getElementById('renderStatus');
+  const logEl = document.getElementById('log');
+  const outputVideo = document.getElementById('outputVideo');
+
+  prepareForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    prepareBtn.disabled = true;
+    prepareBtn.textContent = 'Generating…';
+    try {
+      const fd = new FormData(prepareForm);
+      const res = await fetch('/admin/prepare', { method: 'POST', body: fd });
+      const json = await res.json();
+      if (!json.ok) throw new Error(json.error || 'Prepare failed');
+
+      scriptText.value = JSON.stringify(json.script, null, 2);
+      if (json.warnings && json.warnings.length) {
+        warningsBox.hidden = false;
+        warningsBox.innerHTML = '<strong>Notes</strong><ul>' + json.warnings.map(w => `<li>${w}</li>`).join('') + '</ul>';
+      } else {
+        warningsBox.hidden = true;
+      }
+      reviewSection.hidden = false;
+      reviewSection.scrollIntoView({ behavior: 'smooth' });
+    } catch (err) {
+      alert('Prepare failed: ' + err.message);
+    } finally {
+      prepareBtn.disabled = false;
+      prepareBtn.textContent = 'Generate scene plan';
+    }
+  });
+
+  document.getElementById('editAgainBtn').addEventListener('click', () => {
+    reviewSection.hidden = true;
+  });
+
+  renderBtn.addEventListener('click', async () => {
+    // Validate JSON before sending so a typo doesn't waste a render cycle.
+    try {
+      JSON.parse(scriptText.value);
+    } catch (err) {
+      alert('Script is not valid JSON: ' + err.message);
+      return;
+    }
+    renderBtn.disabled = true;
+    renderStatus.textContent = 'Rendering… this can take a minute or two.';
+    try {
+      const res = await fetch('/admin/render', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ scriptText: scriptText.value }),
+      });
+      const json = await res.json();
+      logEl.textContent = json.log || '';
+      if (!json.ok) throw new Error(json.error || 'Render failed');
+
+      outputVideo.src = json.videoUrl;
+      outputSection.hidden = false;
+      renderStatus.textContent = 'Done.';
+      outputSection.scrollIntoView({ behavior: 'smooth' });
+    } catch (err) {
+      renderStatus.textContent = '';
+      alert('Render failed: ' + err.message);
+    } finally {
+      renderBtn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

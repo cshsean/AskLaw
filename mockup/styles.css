@@ -214,6 +214,25 @@ h1, h2, h3, h4 {
   text-decoration: none;
 }
 
+.nav-admin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px dashed var(--line-strong);
+  color: var(--ink-muted, #5b6472);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  background: transparent;
+}
+.nav-admin:hover {
+  border-color: var(--accent);
+  border-style: solid;
+  color: var(--accent);
+  text-decoration: none;
+}
+
 /* ---- Hero (dashboard) ------------------------------------------------- */
 .hero {
   padding: var(--s8) 0 var(--s6);

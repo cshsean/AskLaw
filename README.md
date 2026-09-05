@@ -13,6 +13,8 @@ Planning and design mockup. No production build yet.
 | Path | What it is |
 |---|---|
 | `docs/frontend-plan.md` | Front-end plan: positioning, IA, page specs, content model, wireframes, design system, critique & recommendations |
+| `docs/recommendations.md` | Conditions under which GenAI simulation genuinely beats static content |
+| `docs/video-pipeline-plan.md` | GenAI video pipeline plan (Remotion + Synthesia/HeyGen) — planning stage, not yet greenlit |
 | `mockup/index.html` | Dashboard — 17 problem cards, search, category filters, chat |
 | `mockup/detail.html` | Problem detail — "how it helps" text + "how to use" and "how to download" videos, tools list |
 | `mockup/styles.css` | Shared styles (self-contained, no external dependencies) |

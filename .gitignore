@@ -11,3 +11,21 @@ node_modules/
 dist/
 .next/
 .astro/
+
+# Video pipeline: raw capture footage and rendered/intermediate media are large
+# binaries that don't belong in git. Keep the pipeline code + data, not the media.
+pipeline/raw/*
+pipeline/tmp/*
+pipeline/out/*
+!pipeline/raw/.gitkeep
+!pipeline/tmp/.gitkeep
+!pipeline/out/.gitkeep
+
+# product-video-pipeline pilot: generated/mock media, uploads, and secrets
+product-video-pipeline/assets/*
+product-video-pipeline/out/*
+product-video-pipeline/data/*.generated.json
+product-video-pipeline/data/uploaded-documents/*
+product-video-pipeline/data/last-directions.txt
+product-video-pipeline/.env
+product-video-pipeline/*-result.json

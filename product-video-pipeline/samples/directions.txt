@@ -1,0 +1,12 @@
+Sample directions for admin-UI testing.
+
+- Name the tool (PointOne) explicitly in scene 2 — right now it's already
+  named in sample-script.json, but if you're testing with the plain
+  data/billings-invoices.json instead, add the name there.
+- Keep the tone reassuring, not salesy — this audience is skeptical of AI
+  marketing (see docs/frontend-plan.md positioning notes).
+- Scene 4 (human review) is a firm policy requirement, not just good UX —
+  see supporting-doc-firm-review-policy.md. Don't let it get cut for time.
+- If a real PointOne screen recording is attached for scene 3, keep it under
+  15 seconds — long enough to show the two-column layout (activity in,
+  drafts out), not a full feature tour.
