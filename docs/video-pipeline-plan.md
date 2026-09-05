@@ -8,18 +8,35 @@ below the "how AI helps" text block (§5 of the frontend plan).
 
 ---
 
-## 1. What this is (and isn't)
+## 1. Fixed scene structure
+
+Every generated video follows the same three-part order, enforced in the script
+generator, not left to per-problem judgment:
+
+1. **What is it** — one or more scenes plainly naming and describing the tool.
+   Must come first; never opens with the pain point or a benefit claim before the
+   tool itself has been introduced.
+2. **How to use it** — *optional*, included only when a real screen recording has
+   been supplied for that tool (§4a). Exactly one screen-recording scene, placed
+   between "what is it" and "how it helps." Skipped entirely — not replaced with
+   narrated UI steps — when no recording exists yet.
+3. **How it helps** — one or more scenes tying the tool back to the lawyer's
+   actual pain point, grounded in the script. Any human-review/approval step
+   described in the script or supporting documents must appear here as its own
+   beat; it is a compliance requirement, not something to trim for pacing.
+
+## 2. What this is (and isn't)
 
 - **Is:** a short (30–90s), general, AI-generated explainer of *how a class of AI
   tool accomplishes the task* (e.g. "how AI helps track billing invoices") —
   conceptual, not tied to any single vendor's real interface.
 - **Is not, for the conceptual portion:** a step-by-step tutorial. The
-  data-flow/mechanism segments stay generic (§2) — never a fabricated recreation of
+  data-flow/mechanism segments stay generic (§3) — never a fabricated recreation of
   a specific product's real interface.
 - **Does include one real segment:** a short (~10–15s), genuinely screen-recorded
   clip of the actual tool's interface, to show real navigation/UI. This is
   **manually captured footage, not AI-generated** — HeyGen/Remotion don't invent
-  it, they place it. See §3a and §5 for how this is sourced and kept current.
+  it, they place it. See §4a and §6 for how this is sourced and kept current.
 - **Why genAI, specifically (per `docs/recommendations.md`, condition 1 — high UI
   volatility):** the site documents third-party tools it doesn't control. Their UIs
   change on their own schedule. A generated *conceptual* clip (never claiming to be
@@ -33,7 +50,7 @@ below the "how AI helps" text block (§5 of the frontend plan).
 
 ---
 
-## 2. Scope for v1
+## 3. Scope for v1
 
 - One clip **per problem** (17 total at full content), generated from that
   problem's existing data record — not per tool. Tool-specific footage is exactly
@@ -47,7 +64,7 @@ below the "how AI helps" text block (§5 of the frontend plan).
 
 ---
 
-## 3. Pipeline
+## 4. Pipeline
 
 ```
 problem data record (slug, title, overviewCopy, tools[], quickFacts[])
@@ -55,7 +72,7 @@ problem data record (slug, title, overviewCopy, tools[], quickFacts[])
         ▼
   1. Script generation (LLM)
      → ordered JSON scene list: [{scene, narration, visual_intent}, ...]
-     → human review / edit gate (mandatory, see §5)
+     → human review / edit gate (mandatory, see §6)
         │
         ▼
   2. Narration render (Synthesia or HeyGen API)
@@ -80,10 +97,10 @@ Key point: there is no manual *editing* step (dragging clips on a timeline).
 Ordering and composition are both driven by the same scene JSON produced in step
 1 — Remotion renders directly from data, the same way the page template renders
 HTML from data. The one manual step in the whole pipeline is capturing the real
-screen recording itself (§3a) — that's inherent to it being real footage, not a
+screen recording itself (§4a) — that's inherent to it being real footage, not a
 gap in the automation.
 
-### 3a. Real screen-recording segment
+### 4a. Real screen-recording segment
 
 - **Source:** either (a) someone on the team screen-records the featured tool
   once, following a fixed short script ("open the tool, do X, see Y"), or (b) an
@@ -98,11 +115,11 @@ gap in the automation.
 - **Freshness is tracked, not assumed.** Each recording carries a `capturedAt`
   date and a `verifiedAt` date. It does not get silently regenerated the way the
   conceptual segments do (there's no automated way to detect a UI redesign) — it
-  needs a periodic manual spot-check instead. See §7 for cadence decision.
+  needs a periodic manual spot-check instead. See §8 for cadence decision.
 
 ---
 
-## 4. Why Remotion for the composition layer
+## 5. Why Remotion for the composition layer
 
 - Composes video from code + data (React components), matching the site's
   existing "one template, fed by data" philosophy (frontend-plan §3, §11) — the
@@ -119,18 +136,18 @@ fallback if Remotion's render infra becomes a bottleneck), plain FFmpeg scriptin
 
 ---
 
-## 5. Guardrails (non-negotiable, carried from earlier discussion)
+## 6. Guardrails (non-negotiable, carried from earlier discussion)
 
 - **Mandatory human review of the generated script before any rendering.** The
   script is the one place inaccuracy or an implied claim ("this tool guarantees…")
   could sneak in; review it as text before it becomes a harder-to-edit video.
 - **The conceptual/diagram segments never fake a real product's UI** — those stay
   generic motion graphics. The one segment that *does* show a real UI must be
-  actual, current, verified footage (§3a) — never a generated recreation of it.
+  actual, current, verified footage (§4a) — never a generated recreation of it.
   Mixing a fabricated "looks real" UI clip in with genuinely real ones is worse
   than either alone, since a viewer has no way to tell which is which.
 - **Screen-recording freshness needs an owner.** Someone must be responsible for
-  the periodic spot-check in §3a — this doesn't get an automated regeneration
+  the periodic spot-check in §4a — this doesn't get an automated regeneration
   trigger the way the conceptual segments do.
 - **Every clip includes a human-checkpoint beat** in the narration/visual sequence
   (e.g. "you review before it's sent") — consistent with the site's trust
@@ -143,7 +160,7 @@ fallback if Remotion's render infra becomes a bottleneck), plain FFmpeg scriptin
 
 ---
 
-## 6. Data model addition
+## 7. Data model addition
 
 Extend the per-problem record (frontend-plan §11) with:
 
@@ -180,7 +197,7 @@ manual audit pass.
 
 ---
 
-## 7. Open decisions before build
+## 8. Open decisions before build
 
 1. Synthesia vs. HeyGen for narration — needs a quick side-by-side on: API scene
    support, voice/avatar quality, per-minute cost at ~17 clips.
@@ -199,7 +216,7 @@ manual audit pass.
 
 ---
 
-## 8. Status
+## 9. Status
 
 Planning complete pending greenlight. **Do not begin implementation until
 explicitly approved** — this doc is the spec to review first.

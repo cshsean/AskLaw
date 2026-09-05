@@ -1,7 +1,7 @@
-Billable time has a habit of disappearing in the gaps — the email you answered on the train, the five-minute call between hearings, the quick read-through of a filing before you forwarded it on.
+Meet PointOne — a billing assistant that quietly works in the background, built for billable time that just disappears. The email answered on the train. The five-minute call between hearings.
 
-PointOne reads your time entries, correspondence and calendar, and pulls that scattered activity into draft invoice lines automatically. It doesn't guess at what happened in a meeting — it works from what's actually in your calendar and inbox metadata.
+PointOne reads your calendar, correspondence and time entries, and turns that activity into draft invoice lines automatically — no guessing, just what's actually there.
 
-Nothing goes out to a client automatically. Every line PointOne drafts sits in a review queue. You check it, adjust anything that's off, and only then does it become part of an invoice. This review step isn't optional — it's firm policy, and it should never be skipped for speed.
+But nothing goes straight to a client. Every line lands in a review queue first, and only after you check it does it become an invoice. That's firm policy — never skipped, however busy things get.
 
-Most firms find PointOne catches more billable time than manual logging alone, simply because it doesn't rely on remembering everything at the end of a long day.
+And the payoff: firms using PointOne consistently capture more billable time than logging it by hand.

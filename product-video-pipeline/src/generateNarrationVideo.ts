@@ -55,7 +55,7 @@ async function main() {
 
   const screenRecordingScene = record.videoScript.find((s) => s.type === "screen_recording");
 
-  const useMock = !process.env.HEYGEN_API_KEY || !process.env.HEYGEN_AVATAR_ID;
+  const useMock = !process.env.HEYGEN_API_KEY || !process.env.HEYGEN_AVATAR_ID || !process.env.HEYGEN_VOICE_ID;
   const narrationLocalPath = path.join(assetsDir, "heygen-narration.mp4");
 
   if (useMock) {
