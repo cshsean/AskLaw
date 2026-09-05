@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keeping track of client billings and invoices — In Chambers</title>
-  <meta name="description" content="How AI can help you stay on top of client billings and invoices." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f4e8c'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='white' text-anchor='middle'%3EIC%3C/text%3E%3C/svg%3E" />
+  <title>Keeping track of client billings and invoices — AskLaw</title>
+  <meta name="description" content="Tools to help you stay on top of client billings and invoices." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a4a8a'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EAL%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,12 +13,19 @@
 
   <div class="rule" aria-hidden="true"></div>
 
+  <div class="gov-banner">
+    <div class="container gov-banner__inner">
+      <svg class="gov-banner__crest" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6l1.6 3.4L17 11l-3.4 1.6L12 16l-1.6-3.4L7 11l3.4-1.6z"/></svg>
+      <span>A collaboration between the Singapore Academy of Law and the Ministry of Law.</span>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="index.html" aria-label="In Chambers — home">
-        <span class="brand__mark" aria-hidden="true">IC</span>
-        <span class="brand__name">In Chambers</span>
-        <span class="brand__tag">AI for lawyers</span>
+      <a class="brand" href="index.html" aria-label="AskLaw — home">
+        <span class="brand__mark" aria-hidden="true">AL</span>
+        <span class="brand__name">AskLaw</span>
+        <span class="brand__tag">tools for lawyers</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="index.html">All problems</a>
@@ -43,16 +50,20 @@
         <span class="detail-hero__icon" aria-hidden="true">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z"/><path d="M9 7h6"/><path d="M9 11h6"/></svg>
         </span>
-        <span class="tag">administrative</span>
+        <div class="detail-hero__tags">
+          <span class="card__cat">administrative</span>
+          <!-- Practice-area tags render here when present, e.g.:
+               <span class="card__tag">family law</span> -->
+        </div>
         <h1 id="detailTitle">Keeping track of client billings and invoices</h1>
         <p class="detail-hero__desc">
-          Stop losing billable time in the gaps between matter work. Let AI
+          Stop losing billable time in the gaps between matter work. Let a tool
           draft the entry, then you approve it.
         </p>
       </div>
-      <a class="btn btn--primary" href="#download">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-        Get the tool
+      <a class="btn btn--primary" href="#tools">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        See the tools
       </a>
     </section>
 
@@ -60,7 +71,6 @@
       <div class="container subnav__inner">
         <a href="#overview" class="is-active">Overview</a>
         <a href="#how-to-use">How to use</a>
-        <a href="#download">Download</a>
         <a href="#tools">Tools for this job</a>
       </div>
     </nav>
@@ -70,7 +80,7 @@
 
         <section id="overview" aria-labelledby="overviewTitle">
           <span class="section-kicker">Overview</span>
-          <h2 id="overviewTitle">How AI helps with billing</h2>
+          <h2 id="overviewTitle">How these tools help with billing</h2>
           <div class="prose">
             <p>
               Billing slips because it happens in the gaps between matter work.
@@ -78,7 +88,7 @@
               to “later” — then later never comes.
             </p>
             <p>
-              AI tools close that gap. They watch the work you're already doing —
+              These tools close that gap. They watch the work you're already doing —
               your emails, documents and calendar — and draft a billable entry for
               you. You review it, adjust it if needed, and approve it. Nothing is
               billed without you.
@@ -133,40 +143,6 @@
           </span>
         </section>
 
-        <section id="download" aria-labelledby="downloadTitle">
-          <span class="section-kicker">Download</span>
-          <h2 id="downloadTitle">Get the tool</h2>
-          <div class="prose">
-            <p>
-              No installation to manage. You download a small desktop app, sign in
-              once, and it starts watching your work the same day.
-            </p>
-          </div>
-
-          <figure class="video" data-video>
-            <span class="video__badge">1 min</span>
-            <button class="video__play" type="button" aria-label="Play: how to download and sign in to PointOne">
-              <span class="play-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-              </span>
-            </button>
-            <span class="video__status" aria-hidden="true">
-              This is a demo — the video would play here.
-            </span>
-          </figure>
-          <span class="video__caption">
-            Downloading and signing in takes under five minutes.
-          </span>
-
-          <div style="margin-top: var(--s5);">
-            <a class="btn btn--primary" href="#">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-              Download PointOne
-            </a>
-            <span style="margin-left: var(--s3); font-size: var(--text-sm); color: var(--muted);">Free trial, no card required.</span>
-          </div>
-        </section>
-
         <section id="tools" aria-labelledby="toolsTitle">
           <span class="section-kicker">Tools for this job</span>
           <h2 id="toolsTitle">Three tools, three ways to cover it</h2>
@@ -175,6 +151,13 @@
               These work well together: one captures the time, one turns it into
               invoices, one keeps the ledger honest.
             </p>
+          </div>
+
+          <div class="neutrality-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <span>AskLaw does not endorse any specific tool. Each is listed because
+            it can do the job described — compare them and choose what fits your
+            practice.</span>
           </div>
 
           <a class="tool" href="#">
@@ -245,7 +228,7 @@
           </div>
           <div class="fact">
             <span class="fact__label">Cost</span>
-            <span class="fact__value">Free trial, then monthly</span>
+            <span class="fact__value">Varies by tool</span>
           </div>
           <div class="fact">
             <span class="fact__label">Last updated</span>
@@ -266,12 +249,15 @@
       <div class="site-footer__inner">
         <div>
           <a class="brand" href="index.html">
-            <span class="brand__mark" aria-hidden="true">IC</span>
-            <span class="brand__name">In Chambers</span>
+            <span class="brand__mark" aria-hidden="true">AL</span>
+            <span class="brand__name">AskLaw</span>
           </a>
           <p class="site-footer__note">
-            Plain-language guides to AI for practicing lawyers and firm staff.
+            Plain-language guides to tools for practicing lawyers and firm staff.
             No jargon, no hype — just the tool for the job.
+          </p>
+          <p class="site-footer__collab">
+            A collaboration between the Singapore Academy of Law and the Ministry of Law.
           </p>
         </div>
         <div class="site-footer__links">
@@ -283,7 +269,7 @@
         </div>
       </div>
       <div class="site-footer__base">
-        <span>© 2026 In Chambers. Built for lawyers, in plain English.</span>
+        <span>© 2026 AskLaw. Built for lawyers, in plain English.</span>
         <span>Demo mockup — tool names and videos are placeholders.</span>
       </div>
     </div>
