@@ -1,0 +1,203 @@
+[
+  {
+    "slug": "explaining-legal-terms-to-clients",
+    "title": "Explaining legal terms to non-legally trained clients",
+    "category": "clients",
+    "description": "Turn dense legal language into plain words your clients actually understand.",
+    "icon": "<path d=\"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z\"/>",
+    "toolsCount": 2
+  },
+  {
+    "slug": "combing-through-emails",
+    "title": "Combing through emails to find earlier correspondence",
+    "category": "clients",
+    "description": "Search years of emails in seconds to find that one message.",
+    "icon": "<rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"m22 6-10 6L2 6\"/>",
+    "toolsCount": 4
+  },
+  {
+    "slug": "auto-language-translation",
+    "title": "Auto-language translation for cross-border correspondence",
+    "category": "clients",
+    "description": "Draft and read emails across languages without losing the meaning.",
+    "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M2 12h20\"/><path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"/>",
+    "toolsCount": 3
+  },
+  {
+    "slug": "responding-to-clients-empathetically",
+    "title": "Responding to clients empathetically",
+    "category": "clients",
+    "description": "Reply faster with the right tone, even on a hard day.",
+    "icon": "<path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/>",
+    "toolsCount": 2
+  },
+  {
+    "slug": "reviewing-past-correspondence",
+    "title": "Reviewing past correspondence to recall earlier advice",
+    "category": "clients",
+    "description": "Pull up what you told a client before, so your advice stays consistent.",
+    "icon": "<path d=\"M3 3v5h5\"/><path d=\"M3.05 13a9 9 0 1 0 1.9-7.4L3 8\"/><path d=\"M12 7v5l4 2\"/>",
+    "toolsCount": 3
+  },
+  {
+    "slug": "billings-and-invoices",
+    "title": "Keeping track of client billings and invoices",
+    "category": "administrative",
+    "description": "Spot unbilled work and keep every invoice accounted for.",
+    "icon": "<path d=\"M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z\"/><path d=\"M9 7h6\"/><path d=\"M9 11h6\"/>",
+    "toolsCount": 3,
+    "detail": {
+      "heroDesc": "Stop losing billable time in the gaps between matter work. Let AI draft the entry, then you approve it.",
+      "overview": {
+        "paragraphs": [
+          "Billing slips because it happens in the gaps between matter work. You finish a call or an email, and recording the charge gets pushed to “later” — then later never comes.",
+          "AI tools close that gap. They watch the work you're already doing — your emails, documents and calendar — and draft a billable entry for you. You review it, adjust it if needed, and approve it. Nothing is billed without you.",
+          "You can also ask in plain English, like “what have I billed Smith & Co this month?” or “which matters haven't been invoiced since April?”, and get a summary instead of opening the ledger."
+        ],
+        "callout": "Your review stays in charge. These tools draft the entry, but a person approves every line before a client is billed.",
+        "whatItCanDo": [
+          "Draft bill entries from your emails, calendar and documents.",
+          "Answer plain-English questions about what's billed and what's owing.",
+          "Flag matters with unbilled work before month-end."
+        ]
+      },
+      "howToUse": {
+        "copy": "The tool runs quietly in the background of your day. At the end of it, it hands you a list of suggested entries — you tick, edit or discard, and the approved ones move to your invoice.",
+        "videoBadge": "2 min",
+        "videoCaption": "Watch how PointOne captures your day and drafts the entries for you to approve."
+      },
+      "download": {
+        "copy": "No installation to manage. You download a small desktop app, sign in once, and it starts watching your work the same day.",
+        "videoBadge": "1 min",
+        "videoCaption": "Downloading and signing in takes under five minutes.",
+        "ctaLabel": "Download PointOne",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "These work well together: one captures the time, one turns it into invoices, one keeps the ledger honest.",
+      "tools": [
+        {
+          "name": "PointOne",
+          "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/>",
+          "pointers": [
+            "Captures time automatically from email, calendar and documents.",
+            "Drafts bill entries you approve before anything is charged.",
+            "Answers plain-English questions about your matters."
+          ]
+        },
+        {
+          "name": "Biller",
+          "icon": "<path d=\"M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z\"/><path d=\"M9 7h6\"/><path d=\"M9 11h6\"/>",
+          "pointers": [
+            "Turns approved entries into invoices ready to send.",
+            "Tracks what each client owes and what's overdue.",
+            "Sends polite reminders so you don't have to chase."
+          ]
+        },
+        {
+          "name": "Ledgerline",
+          "icon": "<path d=\"M3 3v18h18\"/><path d=\"M7 15l4-4 4 4 5-6\"/>",
+          "pointers": [
+            "Reconciles billing against your office account.",
+            "Flags gaps between work done and work billed."
+          ]
+        }
+      ],
+      "quickFacts": [
+        { "label": "Tools reviewed", "value": "3" },
+        { "label": "Time to first use", "value": "About 10 minutes" },
+        { "label": "Skill needed", "value": "None — point and click" },
+        { "label": "Where your data goes", "value": "Your own account; nothing shared with the court" },
+        { "label": "Cost", "value": "Free trial, then monthly" },
+        { "label": "Last updated", "value": "August 2026" }
+      ]
+    }
+  },
+  {
+    "slug": "tidying-up-documents",
+    "title": "Tidying up documents (exhibits, AEICs)",
+    "category": "administrative",
+    "description": "Sort, name and organise bundles and exhibits without the busywork.",
+    "icon": "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\"/>",
+    "toolsCount": 2
+  },
+  {
+    "slug": "tracking-time-on-files",
+    "title": "Tracking time spent on individual files",
+    "category": "administrative",
+    "description": "Record hours as you work, so no billable time slips away.",
+    "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/>",
+    "toolsCount": 4
+  },
+  {
+    "slug": "contacting-court-for-filing-status",
+    "title": "Contacting the court for filing status",
+    "category": "administrative",
+    "description": "Find the right contact and track where a filing stands.",
+    "icon": "<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z\"/>",
+    "toolsCount": 2
+  },
+  {
+    "slug": "finding-documents-on-e-litigation",
+    "title": "Finding clients' documents on E-Litigation",
+    "category": "administrative",
+    "description": "Locate documents in the portal without clicking through every case.",
+    "icon": "<circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/>",
+    "toolsCount": 3
+  },
+  {
+    "slug": "extracting-templates-from-practice-directions",
+    "title": "Extracting templates from court practice directions",
+    "category": "procedural",
+    "description": "Pull the forms and templates you need straight from the directions.",
+    "icon": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/>",
+    "toolsCount": 2
+  },
+  {
+    "slug": "determining-best-legal-course-of-action",
+    "title": "Determining the best legal course of action",
+    "category": "procedural",
+    "description": "Map out your options and see which path the law supports.",
+    "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z\"/>",
+    "toolsCount": 3
+  },
+  {
+    "slug": "ensuring-compliance-with-roc",
+    "title": "Ensuring submissions comply with ROC and Practice Directions",
+    "category": "procedural",
+    "description": "Check your filing against the rules before you send it.",
+    "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 11.5 2 2 4-4\"/>",
+    "toolsCount": 3
+  },
+  {
+    "slug": "looking-through-unfamiliar-legislation",
+    "title": "Looking through unfamiliar legislation",
+    "category": "substantive",
+    "description": "Find the section you need in an Act you've never read before.",
+    "icon": "<path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"/><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"/>",
+    "toolsCount": 4
+  },
+  {
+    "slug": "reducing-time-spent-on-research",
+    "title": "Reducing time spent on research",
+    "category": "substantive",
+    "description": "Get to the relevant cases and provisions faster.",
+    "icon": "<path d=\"M5 3h14\"/><path d=\"M5 21h14\"/><path d=\"M7 3v2a5 5 0 0 0 10 0V3\"/><path d=\"M7 21v-2a5 5 0 0 1 10 0v2\"/>",
+    "toolsCount": 3
+  },
+  {
+    "slug": "researching-regulations-under-statutory-bodies",
+    "title": "Researching regulations under statutory bodies (MOM, ACRA, LTA, URA, HDB)",
+    "category": "substantive",
+    "description": "Find what these bodies require, without digging through notices.",
+    "icon": "<line x1=\"3\" y1=\"22\" x2=\"21\" y2=\"22\"/><line x1=\"6\" y1=\"18\" x2=\"6\" y2=\"11\"/><line x1=\"10\" y1=\"18\" x2=\"10\" y2=\"11\"/><line x1=\"14\" y1=\"18\" x2=\"14\" y2=\"11\"/><line x1=\"18\" y1=\"18\" x2=\"18\" y2=\"11\"/><path d=\"M12 2 20 7H4z\"/>",
+    "toolsCount": 2
+  },
+  {
+    "slug": "finding-suitable-contract-template",
+    "title": "Finding the most suitable contract template",
+    "category": "substantive",
+    "description": "Start from a template that already fits your deal.",
+    "icon": "<path d=\"M12 20h9\"/><path d=\"M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z\"/>",
+    "toolsCount": 3
+  }
+]

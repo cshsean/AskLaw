@@ -1,0 +1,6 @@
+[
+  { "key": "clients", "label": "clients and cases" },
+  { "key": "administrative", "label": "administrative" },
+  { "key": "procedural", "label": "procedural law" },
+  { "key": "substantive", "label": "substantive law" }
+]
