@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>In Chambers — AI tools for lawyers</title>
-  <meta name="description" content="Plain-language guides to AI for everyday legal work, sorted by the problem — not the product." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f4e8c'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='white' text-anchor='middle'%3EIC%3C/text%3E%3C/svg%3E" />
+  <title>AskLaw — tools for lawyers</title>
+  <meta name="description" content="Plain-language guides to tools for everyday legal work, sorted by the problem — not the product." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a4a8a'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EAL%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,12 +13,19 @@
 
   <div class="rule" aria-hidden="true"></div>
 
+  <div class="gov-banner">
+    <div class="container gov-banner__inner">
+      <svg class="gov-banner__crest" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6l1.6 3.4L17 11l-3.4 1.6L12 16l-1.6-3.4L7 11l3.4-1.6z"/></svg>
+      <span>A collaboration between the Singapore Academy of Law and the Ministry of Law.</span>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="index.html" aria-label="In Chambers — home">
-        <span class="brand__mark" aria-hidden="true">IC</span>
-        <span class="brand__name">In Chambers</span>
-        <span class="brand__tag">AI for lawyers</span>
+      <a class="brand" href="index.html" aria-label="AskLaw — home">
+        <span class="brand__mark" aria-hidden="true">AL</span>
+        <span class="brand__name">AskLaw</span>
+        <span class="brand__tag">tools for lawyers</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a class="is-active" href="index.html" aria-current="page">All problems</a>
@@ -32,8 +39,8 @@
 
   <main id="main">
     <section class="hero container">
-      <span class="hero__eyebrow">AI, explained plainly</span>
-      <h1>Find an AI tool for the job.</h1>
+      <span class="hero__eyebrow">For lawyers, in plain English</span>
+      <h1>Find a tool for the job.</h1>
       <p class="hero__lede">
         Every guide here starts from a problem you recognise — a task that eats
         your afternoon, not a product name. Browse by the work itself, and we'll
@@ -53,7 +60,7 @@
 
         <div class="pills" role="group" aria-label="Filter by category">
           <button class="pill" data-filter="all" aria-pressed="true">all</button>
-          <button class="pill" data-filter="clients" aria-pressed="false">clients and cases</button>
+          <button class="pill" data-filter="clients" aria-pressed="false">clients</button>
           <button class="pill" data-filter="administrative" aria-pressed="false">administrative</button>
           <button class="pill" data-filter="procedural" aria-pressed="false">procedural law</button>
           <button class="pill" data-filter="substantive" aria-pressed="false">substantive law</button>
@@ -61,12 +68,20 @@
 
         <span class="result-count" id="resultCount" aria-live="polite"></span>
       </div>
+
+      <div class="tag-filters">
+        <span class="tag-filters__label">Practice area</span>
+        <div class="pills pills--tags" role="group" aria-label="Filter by practice area">
+          <button class="pill pill--tag" data-tag="family-law" aria-pressed="false">family law</button>
+          <button class="pill pill--tag" data-tag="criminal-law" aria-pressed="false">criminal law</button>
+        </div>
+      </div>
     </section>
 
     <section class="container" id="how-it-works" aria-label="All problems">
       <div class="grid" id="cardGrid">
 
-        <!-- Clients and Cases -->
+        <!-- Clients -->
         <a class="card" href="detail.html" data-category="clients"
            data-title="Explaining legal terms to non-legally trained clients"
            data-desc="Turn dense legal language into plain words your clients actually understand.">
@@ -74,55 +89,43 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           </span>
           <h3 class="card__title">Explaining legal terms to non-legally trained clients</h3>
-          <span class="card__cat">clients and cases</span>
+          <span class="card__tags"><span class="card__cat">clients</span></span>
           <p class="card__desc">Turn dense legal language into plain words your clients actually understand.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>2 tools</span>
         </a>
 
         <a class="card" href="detail.html" data-category="clients"
-           data-title="Combing through emails to find earlier correspondence"
+           data-title="Comb through emails to find earlier correspondence"
            data-desc="Search years of emails in seconds to find that one message.">
           <span class="card__icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 6L2 6"/></svg>
           </span>
-          <h3 class="card__title">Combing through emails to find earlier correspondence</h3>
-          <span class="card__cat">clients and cases</span>
+          <h3 class="card__title">Comb through emails to find earlier correspondence</h3>
+          <span class="card__tags"><span class="card__cat">clients</span></span>
           <p class="card__desc">Search years of emails in seconds to find that one message.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>4 tools</span>
         </a>
 
         <a class="card" href="detail.html" data-category="clients"
-           data-title="Auto-language translation for cross-border correspondence"
+           data-title="Translate languages"
            data-desc="Draft and read emails across languages without losing the meaning.">
           <span class="card__icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </span>
-          <h3 class="card__title">Auto-language translation for cross-border correspondence</h3>
-          <span class="card__cat">clients and cases</span>
+          <h3 class="card__title">Translate languages</h3>
+          <span class="card__tags"><span class="card__cat">clients</span></span>
           <p class="card__desc">Draft and read emails across languages without losing the meaning.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>3 tools</span>
         </a>
 
         <a class="card" href="detail.html" data-category="clients"
-           data-title="Responding to clients empathetically"
-           data-desc="Reply faster with the right tone, even on a hard day.">
-          <span class="card__icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </span>
-          <h3 class="card__title">Responding to clients empathetically</h3>
-          <span class="card__cat">clients and cases</span>
-          <p class="card__desc">Reply faster with the right tone, even on a hard day.</p>
-          <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>2 tools</span>
-        </a>
-
-        <a class="card" href="detail.html" data-category="clients"
-           data-title="Reviewing past correspondence to recall earlier advice"
+           data-title="Review past correspondence to recall earlier advice"
            data-desc="Pull up what you told a client before, so your advice stays consistent.">
           <span class="card__icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v5h5"/><path d="M3.05 13a9 9 0 1 0 1.9-7.4L3 8"/><path d="M12 7v5l4 2"/></svg>
           </span>
-          <h3 class="card__title">Reviewing past correspondence to recall earlier advice</h3>
-          <span class="card__cat">clients and cases</span>
+          <h3 class="card__title">Review past correspondence to recall earlier advice</h3>
+          <span class="card__tags"><span class="card__cat">clients</span></span>
           <p class="card__desc">Pull up what you told a client before, so your advice stays consistent.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>3 tools</span>
         </a>
@@ -135,7 +138,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z"/><path d="M9 7h6"/><path d="M9 11h6"/></svg>
           </span>
           <h3 class="card__title">Keeping track of client billings and invoices</h3>
-          <span class="card__cat">administrative</span>
+          <span class="card__tags"><span class="card__cat">administrative</span></span>
           <p class="card__desc">Spot unbilled work and keep every invoice accounted for.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>3 tools</span>
         </a>
@@ -147,7 +150,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
           </span>
           <h3 class="card__title">Tidying up documents (exhibits, AEICs)</h3>
-          <span class="card__cat">administrative</span>
+          <span class="card__tags"><span class="card__cat">administrative</span></span>
           <p class="card__desc">Sort, name and organise bundles and exhibits without the busywork.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>2 tools</span>
         </a>
@@ -159,7 +162,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </span>
           <h3 class="card__title">Tracking time spent on individual files</h3>
-          <span class="card__cat">administrative</span>
+          <span class="card__tags"><span class="card__cat">administrative</span></span>
           <p class="card__desc">Record hours as you work, so no billable time slips away.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>4 tools</span>
         </a>
@@ -171,7 +174,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </span>
           <h3 class="card__title">Contacting the court for filing status</h3>
-          <span class="card__cat">administrative</span>
+          <span class="card__tags"><span class="card__cat">administrative</span></span>
           <p class="card__desc">Find the right contact and track where a filing stands.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>2 tools</span>
         </a>
@@ -183,12 +186,24 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           </span>
           <h3 class="card__title">Finding clients' documents on E-Litigation</h3>
-          <span class="card__cat">administrative</span>
+          <span class="card__tags"><span class="card__cat">administrative</span></span>
           <p class="card__desc">Locate documents in the portal without clicking through every case.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>3 tools</span>
         </a>
 
-        <!-- Procedural Law -->
+        <a class="card" href="detail.html" data-category="administrative" data-tags="family-law"
+           data-title="Tracking divorce timelines"
+           data-desc="Keep every deadline and milestone in a divorce matter on one clear timeline.">
+          <span class="card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </span>
+          <h3 class="card__title">Tracking divorce timelines</h3>
+          <span class="card__tags"><span class="card__cat">administrative</span><span class="card__tag">family law</span></span>
+          <p class="card__desc">Keep every deadline and milestone in a divorce matter on one clear timeline.</p>
+          <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>2 tools</span>
+        </a>
+
+        <!-- Procedural law -->
         <a class="card" href="detail.html" data-category="procedural"
            data-title="Extracting templates from court practice directions"
            data-desc="Pull the forms and templates you need straight from the directions.">
@@ -196,7 +211,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
           </span>
           <h3 class="card__title">Extracting templates from court practice directions</h3>
-          <span class="card__cat">procedural law</span>
+          <span class="card__tags"><span class="card__cat">procedural law</span></span>
           <p class="card__desc">Pull the forms and templates you need straight from the directions.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>2 tools</span>
         </a>
@@ -208,7 +223,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></svg>
           </span>
           <h3 class="card__title">Determining the best legal course of action</h3>
-          <span class="card__cat">procedural law</span>
+          <span class="card__tags"><span class="card__cat">procedural law</span></span>
           <p class="card__desc">Map out your options and see which path the law supports.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>3 tools</span>
         </a>
@@ -220,58 +235,70 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11.5 2 2 4-4"/></svg>
           </span>
           <h3 class="card__title">Ensuring submissions comply with ROC and Practice Directions</h3>
-          <span class="card__cat">procedural law</span>
+          <span class="card__tags"><span class="card__cat">procedural law</span></span>
           <p class="card__desc">Check your filing against the rules before you send it.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>3 tools</span>
         </a>
 
-        <!-- Substantive Law -->
+        <a class="card" href="detail.html" data-category="procedural" data-tags="criminal-law"
+           data-title="Submitting bail applications"
+           data-desc="Draft and check a bail application before you file it with the court.">
+          <span class="card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+          </span>
+          <h3 class="card__title">Submitting bail applications</h3>
+          <span class="card__tags"><span class="card__cat">procedural law</span><span class="card__tag">criminal law</span></span>
+          <p class="card__desc">Draft and check a bail application before you file it with the court.</p>
+          <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>2 tools</span>
+        </a>
+
+        <!-- Substantive law -->
         <a class="card" href="detail.html" data-category="substantive"
-           data-title="Looking through unfamiliar legislation"
-           data-desc="Find the section you need in an Act you've never read before.">
+           data-title="Looking through and summarising unfamiliar legislation"
+           data-desc="Find the section you need in an Act you've never read — and get a plain summary of what it means.">
           <span class="card__icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </span>
-          <h3 class="card__title">Looking through unfamiliar legislation</h3>
-          <span class="card__cat">substantive law</span>
-          <p class="card__desc">Find the section you need in an Act you've never read before.</p>
+          <h3 class="card__title">Looking through and summarising unfamiliar legislation</h3>
+          <span class="card__tags"><span class="card__cat">substantive law</span></span>
+          <p class="card__desc">Find the section you need in an Act you've never read — and get a plain summary of what it means.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>4 tools</span>
         </a>
 
         <a class="card" href="detail.html" data-category="substantive"
-           data-title="Reducing time spent on research"
-           data-desc="Get to the relevant cases and provisions faster.">
-          <span class="card__icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14"/><path d="M5 21h14"/><path d="M7 3v2a5 5 0 0 0 10 0V3"/><path d="M7 21v-2a5 5 0 0 1 10 0v2"/></svg>
-          </span>
-          <h3 class="card__title">Reducing time spent on research</h3>
-          <span class="card__cat">substantive law</span>
-          <p class="card__desc">Get to the relevant cases and provisions faster.</p>
-          <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>3 tools</span>
-        </a>
-
-        <a class="card" href="detail.html" data-category="substantive"
-           data-title="Researching regulations under statutory bodies (MOM, ACRA, LTA, URA, HDB)"
+           data-title="Finding regulations and guidelines under statutory bodies (MOM, ACRA, LTA, URA, HDB)"
            data-desc="Find what these bodies require, without digging through notices.">
           <span class="card__icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><path d="M12 2 20 7H4z"/></svg>
           </span>
-          <h3 class="card__title">Researching regulations under statutory bodies (MOM, ACRA, LTA, URA, HDB)</h3>
-          <span class="card__cat">substantive law</span>
+          <h3 class="card__title">Finding regulations and guidelines under statutory bodies (MOM, ACRA, LTA, URA, HDB)</h3>
+          <span class="card__tags"><span class="card__cat">substantive law</span></span>
           <p class="card__desc">Find what these bodies require, without digging through notices.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>2 tools</span>
         </a>
 
         <a class="card" href="detail.html" data-category="substantive"
-           data-title="Finding the most suitable contract template"
+           data-title="Finding suitable contract templates"
            data-desc="Start from a template that already fits your deal.">
           <span class="card__icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
           </span>
-          <h3 class="card__title">Finding the most suitable contract template</h3>
-          <span class="card__cat">substantive law</span>
+          <h3 class="card__title">Finding suitable contract templates</h3>
+          <span class="card__tags"><span class="card__cat">substantive law</span></span>
           <p class="card__desc">Start from a template that already fits your deal.</p>
           <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>3 tools</span>
+        </a>
+
+        <a class="card" href="detail.html" data-category="substantive" data-tags="family-law"
+           data-title="Calculate family maintenance (spousal and child)"
+           data-desc="Work out spousal and child maintenance figures from the current rules.">
+          <span class="card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8"/><path d="M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01"/></svg>
+          </span>
+          <h3 class="card__title">Calculate family maintenance (spousal and child)</h3>
+          <span class="card__tags"><span class="card__cat">substantive law</span><span class="card__tag">family law</span></span>
+          <p class="card__desc">Work out spousal and child maintenance figures from the current rules.</p>
+          <span class="card__meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>2 tools</span>
         </a>
 
       </div>
@@ -288,12 +315,15 @@
       <div class="site-footer__inner">
         <div>
           <a class="brand" href="index.html">
-            <span class="brand__mark" aria-hidden="true">IC</span>
-            <span class="brand__name">In Chambers</span>
+            <span class="brand__mark" aria-hidden="true">AL</span>
+            <span class="brand__name">AskLaw</span>
           </a>
           <p class="site-footer__note">
-            Plain-language guides to AI for practicing lawyers and firm staff.
+            Plain-language guides to tools for practicing lawyers and firm staff.
             No jargon, no hype — just the tool for the job.
+          </p>
+          <p class="site-footer__collab">
+            A collaboration between the Singapore Academy of Law and the Ministry of Law.
           </p>
         </div>
         <div class="site-footer__links">
@@ -305,7 +335,7 @@
         </div>
       </div>
       <div class="site-footer__base">
-        <span>© 2026 In Chambers. Built for lawyers, in plain English.</span>
+        <span>© 2026 AskLaw. Built for lawyers, in plain English.</span>
         <span>Demo mockup — tool names and videos are placeholders.</span>
       </div>
     </div>
@@ -318,7 +348,7 @@
       <span>Describe a problem</span>
     </button>
 
-    <div class="chat-panel" id="chatPanel" role="dialog" aria-label="AI assistant" aria-hidden="true" hidden>
+    <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Assistant" aria-hidden="true" hidden>
       <div class="chat-panel__head">
         <span class="dot" aria-hidden="true"></span>
         <div>
@@ -351,28 +381,41 @@
   </div>
 
   <script>
-    // ---- Card filtering + search ----
+    // ---- Card filtering: primary category (single-select)
+    //      + practice-area tags (multi-select) + search ----
     (function () {
       var search = document.getElementById('search');
-      var pills = document.querySelectorAll('.pill');
+      var pills = document.querySelectorAll('.pill[data-filter]');
+      var tagPills = document.querySelectorAll('.pill[data-tag]');
       var cards = document.querySelectorAll('#cardGrid .card');
       var count = document.getElementById('resultCount');
       var noResults = document.getElementById('noResults');
       var active = 'all';
+      var activeTags = {};   // slug -> true
 
       function apply() {
         var q = (search.value || '').trim().toLowerCase();
+        var selectedTags = Object.keys(activeTags).filter(function (k) {
+          return activeTags[k];
+        });
         var visible = 0;
+
         cards.forEach(function (c) {
           var title = (c.dataset.title || '').toLowerCase();
           var desc = (c.dataset.desc || '').toLowerCase();
           var cat = c.dataset.category;
+          var tags = (c.dataset.tags || '').split(' ').filter(Boolean);
+
           var matchQ = !q || title.indexOf(q) !== -1 || desc.indexOf(q) !== -1;
           var matchCat = active === 'all' || cat === active;
-          var show = matchQ && matchCat;
+          var matchTags = selectedTags.length === 0 ||
+            tags.some(function (t) { return selectedTags.indexOf(t) !== -1; });
+
+          var show = matchQ && matchCat && matchTags;
           c.classList.toggle('is-hidden', !show);
           if (show) visible++;
         });
+
         count.textContent = visible + (visible === 1 ? ' problem' : ' problems');
         noResults.classList.toggle('is-visible', visible === 0);
       }
@@ -382,6 +425,15 @@
           pills.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
           p.setAttribute('aria-pressed', 'true');
           active = p.dataset.filter;
+          apply();
+        });
+      });
+
+      tagPills.forEach(function (p) {
+        p.addEventListener('click', function () {
+          var slug = p.dataset.tag;
+          activeTags[slug] = !activeTags[slug];
+          p.setAttribute('aria-pressed', activeTags[slug] ? 'true' : 'false');
           apply();
         });
       });

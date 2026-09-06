@@ -1,8 +1,11 @@
-# Ashton & Friends
+# AskLaw
 
-A website that compiles AI tools, features, and solutions for **lawyers** to discover and
-adopt into their daily workflow — organized **problem-first**: users browse by the task that
-eats their afternoon, not by product name.
+A collaboration between the **Singapore Academy of Law** and the **Ministry of Law**.
+
+AskLaw is a government directory that compiles AI tools, features, and solutions for **lawyers**
+to discover and adopt into their daily workflow — organized **problem-first**: users browse by
+the task that eats their afternoon, not by product name. Neutral by design: it recommends
+multiple tools for each problem and does not endorse a single one.
 
 ## Status
 
@@ -15,17 +18,24 @@ Planning and design mockup. No production build yet.
 | `docs/frontend-plan.md` | Front-end plan: positioning, IA, page specs, content model, wireframes, design system, critique & recommendations |
 | `docs/recommendations.md` | Conditions under which GenAI simulation genuinely beats static content |
 | `docs/video-pipeline-plan.md` | GenAI video pipeline plan (Remotion + Synthesia/HeyGen) — planning stage, not yet greenlit |
-| `mockup/index.html` | Dashboard — 17 problem cards, search, category filters, chat |
-| `mockup/detail.html` | Problem detail — "how it helps" text + "how to use" and "how to download" videos, tools list |
+| `mockup/index.html` | Dashboard — 18 problem cards, search, category + practice-area filters, chat |
+| `mockup/detail.html` | Problem detail — "how it helps" text + explainer video + tools list |
 | `mockup/styles.css` | Shared styles (self-contained, no external dependencies) |
+| `web/` | Data-driven Next.js rebuild of the mockup (one `/problems/[slug]` route fed by `web/src/data/problems.json`) |
+| `product-video-pipeline/` | GenAI video pipeline pilot (Remotion + HeyGen) for one problem page, plus an admin test bench |
 
 ## View the mockup
 
 Open `mockup/index.html` in any browser. No build step or dependencies — it works offline.
 
+For the data-driven rebuild, run the Next.js app in `web/` (see `web/README.md`):
+
+```
+cd web && npm install && npm run dev
+```
+
 ## Next steps
 
-- Agree the stack (suggested: Astro, static-first).
-- Implement the data-driven detail page — one `/problems/[slug]` route fed by a single data
-  file (recommendation 5 in `docs/frontend-plan.md`).
-- Produce the "how it helps" and "how to download" videos.
+- Produce the "how it helps" explainer video for each problem (see `product-video-pipeline/`
+  for the pilot pipeline).
+- Decide whether to extend the video pipeline beyond the single pilot problem.
