@@ -28,10 +28,40 @@ Planning and design mockup. No production build yet.
 
 Open `mockup/index.html` in any browser. No build step or dependencies — it works offline.
 
-For the data-driven rebuild, run the Next.js app in `web/` (see `web/README.md`):
+## Run the frontend (`web/`)
+
+Data-driven Next.js rebuild of the mockup (see `web/README.md`):
 
 ```
-cd web && npm install && npm run dev
+cd web
+npm install
+npm run dev
+```
+
+Open http://localhost:3000.
+
+## Run the video pipeline (`product-video-pipeline/`)
+
+Full setup and details in `product-video-pipeline/README.md`. Quick start:
+
+```
+cd product-video-pipeline
+npm install
+cp .env.example .env          # optional: add HEYGEN_API_KEY / HEYGEN_AVATAR_ID for real narration
+npm run make-placeholders     # generates local stand-in video files with ffmpeg
+npm run generate-narration    # calls HeyGen (or the mock) and computes scene timing
+npm run preview                # opens Remotion Studio to preview ProblemVideo
+npm run render                  # renders out/billings-invoices.mp4
+```
+
+Requires `ffmpeg`/`ffprobe` on PATH. Without HeyGen credentials, narration falls
+back to a local placeholder clip so the pipeline still runs end-to-end.
+
+To use the admin test bench (upload script/demo video, edit the merged scene
+script, render and preview in one page):
+
+```
+npm run admin   # http://localhost:4174/admin
 ```
 
 ## Next steps
