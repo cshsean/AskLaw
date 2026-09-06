@@ -21,13 +21,6 @@ export type ProblemDetail = {
     videoBadge: string;
     videoCaption: string;
   };
-  download: {
-    copy: string;
-    videoBadge: string;
-    videoCaption: string;
-    ctaLabel: string;
-    ctaNote: string;
-  };
   toolsIntro: string;
   tools: Tool[];
   quickFacts: QuickFact[];
@@ -40,6 +33,7 @@ export type Problem = {
   description: string;
   icon: string;
   toolsCount: number;
+  practiceAreas?: string[];
   detail?: ProblemDetail;
 };
 
