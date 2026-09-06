@@ -992,6 +992,27 @@ h1, h2, h3, h4 {
 }
 .video.is-playing .video__status { opacity: 1; }
 
+.video--pending .video__badge {
+  background: rgba(154,109,15,.85);
+}
+.video--pending .video__status {
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  padding: 0 var(--s5);
+  text-align: center;
+}
+
+.video--real { background: #000; }
+.video--real video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+.video--real .video__badge { z-index: 1; }
+
 .video__caption {
   display: block;
   margin-top: var(--s3);
