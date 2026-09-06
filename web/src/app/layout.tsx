@@ -4,11 +4,11 @@ import "./globals.css";
 import { ChatWidget } from "./ChatWidget";
 
 export const metadata: Metadata = {
-  title: "In Chambers — AI tools for lawyers",
+  title: "AskLaw — AI tools for lawyers",
   description:
     "Plain-language guides to AI for everyday legal work, sorted by the problem — not the product.",
   icons: {
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f4e8c'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='white' text-anchor='middle'%3EIC%3C/text%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f4e8c'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='white' text-anchor='middle'%3EAL%3C/text%3E%3C/svg%3E",
   },
 };
 
@@ -24,11 +24,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         <header className="site-header">
           <div className="container site-header__inner">
-            <Link className="brand" href="/" aria-label="In Chambers — home">
+            <Link className="brand" href="/" aria-label="AskLaw — home">
               <span className="brand__mark" aria-hidden="true">
-                IC
+                AL
               </span>
-              <span className="brand__name">In Chambers</span>
+              <span className="brand__name">AskLaw</span>
               <span className="brand__tag">AI for lawyers</span>
             </Link>
             <nav className="site-nav" aria-label="Primary">
@@ -58,9 +58,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <div>
                 <Link className="brand" href="/">
                   <span className="brand__mark" aria-hidden="true">
-                    IC
+                    AL
                   </span>
-                  <span className="brand__name">In Chambers</span>
+                  <span className="brand__name">AskLaw</span>
                 </Link>
                 <p className="site-footer__note">
                   Plain-language guides to AI for practicing lawyers and firm
@@ -76,7 +76,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               </div>
             </div>
             <div className="site-footer__base">
-              <span>© 2026 In Chambers. Built for lawyers, in plain English.</span>
+              <span>© 2026 AskLaw. Built for lawyers, in plain English.</span>
               <span>Demo mockup — tool names and videos are placeholders.</span>
             </div>
           </div>

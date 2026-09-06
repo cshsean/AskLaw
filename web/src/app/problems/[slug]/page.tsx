@@ -18,7 +18,7 @@ export async function generateMetadata(props: PageProps<"/problems/[slug]">) {
   const problem = (problems as Problem[]).find((p) => p.slug === slug);
   if (!problem) return {};
   return {
-    title: `${problem.title} — In Chambers`,
+    title: `${problem.title} — AskLaw`,
     description: problem.description,
   };
 }
@@ -131,7 +131,11 @@ export default async function ProblemDetailPage(
                   <p>{detail.howToUse.copy}</p>
                 </div>
 
-                <VideoFigure badge={detail.howToUse.videoBadge} playLabel="Play: how it works" />
+                <VideoFigure
+                  badge={detail.howToUse.videoBadge}
+                  playLabel="Play: how it works"
+                  src={detail.howToUse.videoSrc}
+                />
                 <span className="video__caption">{detail.howToUse.videoCaption}</span>
               </section>
 
