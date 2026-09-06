@@ -13,12 +13,19 @@ export function generateStaticParams() {
 const categoryLabel = (key: string) =>
   categories.find((c) => c.key === key)?.label ?? key;
 
+const PRACTICE_AREA_LABELS: Record<string, string> = {
+  "family-law": "family law",
+  "criminal-law": "criminal law",
+};
+
+const practiceAreaLabel = (key: string) => PRACTICE_AREA_LABELS[key] ?? key;
+
 export async function generateMetadata(props: PageProps<"/problems/[slug]">) {
   const { slug } = await props.params;
   const problem = (problems as Problem[]).find((p) => p.slug === slug);
   if (!problem) return {};
   return {
-    title: `${problem.title} — In Chambers`,
+    title: `${problem.title} — AskLaw`,
     description: problem.description,
   };
 }
@@ -51,14 +58,21 @@ export default async function ProblemDetailPage(
             aria-hidden="true"
             dangerouslySetInnerHTML={{ __html: wrapIcon(problem.icon, 26) }}
           />
-          <span className="tag">{categoryLabel(problem.category)}</span>
+          <div className="detail-hero__tags">
+            <span className="card__cat">{categoryLabel(problem.category)}</span>
+            {problem.practiceAreas?.map((pa) => (
+              <span key={pa} className="card__tag">
+                {practiceAreaLabel(pa)}
+              </span>
+            ))}
+          </div>
           <h1 id="detailTitle">{problem.title}</h1>
           <p className="detail-hero__desc">
             {detail ? detail.heroDesc : problem.description}
           </p>
         </div>
         {detail && (
-          <a className="btn btn--primary" href="#download">
+          <a className="btn btn--primary" href="#tools">
             <svg
               width="16"
               height="16"
@@ -70,11 +84,10 @@ export default async function ProblemDetailPage(
               strokeLinejoin="round"
               aria-hidden="true"
             >
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <path d="M7 10l5 5 5-5" />
-              <path d="M12 15V3" />
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
             </svg>
-            Get the tool
+            See the tools
           </a>
         )}
       </section>
@@ -135,50 +148,6 @@ export default async function ProblemDetailPage(
                 <span className="video__caption">{detail.howToUse.videoCaption}</span>
               </section>
 
-              <section id="download" aria-labelledby="downloadTitle">
-                <span className="section-kicker">Download</span>
-                <h2 id="downloadTitle">Get the tool</h2>
-                <div className="prose">
-                  <p>{detail.download.copy}</p>
-                </div>
-
-                <VideoFigure
-                  badge={detail.download.videoBadge}
-                  playLabel="Play: how to download and sign in"
-                />
-                <span className="video__caption">{detail.download.videoCaption}</span>
-
-                <div style={{ marginTop: "var(--s5)" }}>
-                  <a className="btn btn--primary" href="#">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                      <path d="M7 10l5 5 5-5" />
-                      <path d="M12 15V3" />
-                    </svg>
-                    {detail.download.ctaLabel}
-                  </a>
-                  <span
-                    style={{
-                      marginLeft: "var(--s3)",
-                      fontSize: "var(--text-sm)",
-                      color: "var(--muted)",
-                    }}
-                  >
-                    {detail.download.ctaNote}
-                  </span>
-                </div>
-              </section>
-
               <section id="tools" aria-labelledby="toolsTitle">
                 <span className="section-kicker">Tools for this job</span>
                 <h2 id="toolsTitle">
@@ -186,6 +155,29 @@ export default async function ProblemDetailPage(
                 </h2>
                 <div className="prose">
                   <p>{detail.toolsIntro}</p>
+                </div>
+
+                <div className="neutrality-note">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 16v-4" />
+                    <path d="M12 8h.01" />
+                  </svg>
+                  <span>
+                    AskLaw does not endorse any specific tool. Each is listed
+                    because it can do the job described — compare them and
+                    choose what fits your practice.
+                  </span>
                 </div>
 
                 {detail.tools.map((tool) => (

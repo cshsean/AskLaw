@@ -1,5 +1,5 @@
 /* =========================================================================
-   In Chambers — AI tools for lawyers
+   AskLaw — tools for lawyers
    Shared styles for index.html and detail.html
    System font stack only. No build step, opens offline.
    ========================================================================= */
@@ -17,10 +17,16 @@
   --ink-2:        #404a5b;   /* body text */
   --muted:        #697384;   /* meta / captions */
 
-  --accent:       #1f4e8c;   /* deep trustworthy blue */
+  --brand:        #1a4a8a;   /* AskLaw mark — deep navy */
+  --accent:       #1f4e8c;   /* primary interactive / category */
   --accent-ink:   #163c6e;
   --accent-soft:  #e9f0f9;
   --accent-soft-2:#f2f6fb;
+
+  --accent-2:     #2e6b5f;   /* practice-area secondary — muted teal */
+  --accent-2-ink: #24554b;
+  --accent-2-line:#9fc0b7;
+  --accent-2-soft:#e9f2ef;
 
   --focus:        #1f4e8c;
 
@@ -96,8 +102,8 @@ h1, h2, h3, h4 {
    pleading. Reused sparingly (top of page, above the footer). */
 .rule {
   height: 6px;
-  border-top: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
+  border-top: 1px solid var(--brand);
+  border-bottom: 1px solid var(--brand);
 }
 
 /* ---- Layout helpers --------------------------------------------------- */
@@ -129,6 +135,24 @@ h1, h2, h3, h4 {
 }
 .skip-link:focus { transform: translateY(0); }
 
+/* ---- Government collaboration banner ---------------------------------- */
+.gov-banner {
+  background: var(--wash);
+  border-bottom: 1px solid var(--line);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+.gov-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+}
+.gov-banner__crest {
+  color: var(--brand);
+  flex: none;
+}
+
 /* ---- Header ----------------------------------------------------------- */
 .site-header {
   position: sticky;
@@ -159,7 +183,7 @@ h1, h2, h3, h4 {
 .brand__mark {
   width: 26px; height: 26px;
   border-radius: 6px;
-  background: var(--accent);
+  background: var(--brand);
   color: #fff;
   display: grid;
   place-items: center;
@@ -320,6 +344,30 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 
+/* Secondary practice-area filter row */
+.tag-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  margin-top: var(--s3);
+}
+.tag-filters__label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--muted);
+}
+.pill--tag {
+  color: var(--accent-2-ink);
+  border: 1px dashed var(--accent-2-line);
+}
+.pill--tag:hover { border-style: solid; color: var(--accent-2-ink); }
+.pill--tag[aria-pressed="true"] {
+  background: var(--accent-2);
+  border: 1px solid var(--accent-2);
+  color: #fff;
+}
+
 .result-count {
   margin-left: auto;
   font-size: var(--text-sm);
@@ -375,8 +423,14 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 
-.card__cat {
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   align-self: flex-start;
+}
+
+.card__cat {
   font-size: var(--text-xs);
   font-weight: 500;
   color: var(--muted);
@@ -384,6 +438,27 @@ h1, h2, h3, h4 {
   border: 1px solid var(--line);
   padding: 3px 10px;
   border-radius: 999px;
+}
+
+/* Practice-area chip — distinct from the category chip via a leading dot */
+.card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--accent-2-ink);
+  background: #fff;
+  border: 1px solid var(--accent-2-line);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.card__tag::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  flex: none;
 }
 
 .card__desc {
@@ -451,6 +526,11 @@ h1, h2, h3, h4 {
   font-size: var(--text-sm);
   color: var(--muted);
   margin: var(--s3) 0 0;
+}
+.site-footer__collab {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin: var(--s2) 0 0;
 }
 .site-footer__links {
   display: flex;
@@ -622,6 +702,89 @@ h1, h2, h3, h4 {
   flex: none;
 }
 .chat-panel__send:hover { background: var(--accent-ink); }
+.chat-panel__send:disabled {
+  background: var(--line-strong);
+  cursor: not-allowed;
+}
+
+/* Bot answer text inside a bubble */
+.bubble__text { margin: 0; }
+
+/* Related-problem cards rendered under an answer */
+.chat-matches {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  margin-top: var(--s3);
+}
+.chat-match {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--s3);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  box-shadow: var(--shadow-card);
+  transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+.chat-match:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+.chat-match__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.chat-match__reason {
+  font-size: var(--text-xs);
+  line-height: 1.45;
+  color: var(--muted);
+}
+.chat-match__go {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: var(--s2);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--accent);
+}
+.chat-match:hover .chat-match__go { text-decoration: underline; }
+
+/* Muted legal-notice caption */
+.chat-disclaimer {
+  margin: var(--s3) 0 0;
+  font-size: var(--text-xs);
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* Typing indicator */
+.chat-typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 14px 16px;
+}
+.chat-typing__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--muted);
+  animation: chat-blink 1.2s ease-in-out infinite;
+}
+.chat-typing__dot:nth-child(2) { animation-delay: .2s; }
+.chat-typing__dot:nth-child(3) { animation-delay: .4s; }
+@keyframes chat-blink {
+  0%, 80%, 100% { opacity: .25; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-2px); }
+}
 
 /* =========================================================================
    Detail page
@@ -653,6 +816,11 @@ h1, h2, h3, h4 {
   place-items: center;
   margin-bottom: var(--s4);
 }
+.detail-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
 .detail-hero h1 {
   font-size: clamp(1.8rem, 1.1rem + 2.6vw, 2.6rem);
   max-width: 24ch;
@@ -663,17 +831,6 @@ h1, h2, h3, h4 {
   color: var(--ink-2);
   max-width: 60ch;
   margin: var(--s4) 0 0;
-}
-
-.tag {
-  display: inline-block;
-  font-size: var(--text-xs);
-  font-weight: 500;
-  color: var(--muted);
-  background: var(--wash);
-  border: 1px solid var(--line);
-  padding: 4px 12px;
-  border-radius: 999px;
 }
 
 .btn {
@@ -761,6 +918,20 @@ h1, h2, h3, h4 {
   margin: var(--s4) 0;
 }
 .callout strong { color: var(--ink); }
+
+/* Neutrality note — government directory, no endorsements */
+.neutrality-note {
+  display: flex;
+  gap: var(--s3);
+  padding: var(--s3) var(--s4);
+  background: var(--wash);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin: var(--s4) 0;
+}
+.neutrality-note svg { flex: none; margin-top: 2px; color: var(--muted); }
 
 /* Video placeholder */
 .video {
