@@ -5,19 +5,38 @@ import { useState } from "react";
 export function VideoFigure({
   badge,
   playLabel,
+  src,
 }: {
   badge: string;
   playLabel: string;
+  src?: string;
 }) {
   const [playing, setPlaying] = useState(false);
 
+  if (src) {
+    return (
+      <figure className="video video--real">
+        <span className="video__badge">{badge}</span>
+        <video
+          controls
+          preload="metadata"
+          playsInline
+          aria-label={playLabel}
+        >
+          <source src={src} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </figure>
+    );
+  }
+
   return (
-    <figure className={`video${playing ? " is-playing" : ""}`}>
+    <figure className={`video video--pending${playing ? " is-playing" : ""}`}>
       <span className="video__badge">{badge}</span>
       <button
         className="video__play"
         type="button"
-        aria-label={playing ? "Pause: demo video" : playLabel}
+        aria-label={playing ? "Hide details" : playLabel}
         onClick={() => setPlaying((p) => !p)}
       >
         <span className="play-circle">
@@ -27,7 +46,8 @@ export function VideoFigure({
         </span>
       </button>
       <span className="video__status" aria-hidden="true">
-        This is a demo — the video would play here.
+        This walkthrough is in production — the steps are written out below in
+        the meantime.
       </span>
     </figure>
   );

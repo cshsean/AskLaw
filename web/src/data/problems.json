@@ -5,7 +5,79 @@
     "category": "clients",
     "description": "Turn dense legal language into plain words your clients actually understand.",
     "icon": "<path d=\"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z\"/>",
-    "toolsCount": 2
+    "toolsCount": 2,
+    "detail": {
+      "heroDesc": "Turn a dense clause or judgment into an explanation your client will actually read.",
+      "overview": {
+        "paragraphs": [
+          "Clients nod along in the meeting, then re-read your email three times and still aren't sure what “indemnify” means for them. Written correctly, legal advice is precise. Read by a layperson, it's often opaque.",
+          "AI tools take a clause, a judgment, or a letter of advice and rewrite it as a client-facing explanation — same substance, plain words, nothing watered down. You get a first draft to edit, not something to send unread."
+        ],
+        "callout": "The plain-English version is a draft until you've checked it against the actual clause. You sign off on what goes to the client, always.",
+        "whatItCanDo": [
+          "Turn a clause, judgment, or letter of advice into a plain-English explanation.",
+          "Match the reading level to the client, not the court.",
+          "Keep a paired record: what you said in law, what you said to the client."
+        ]
+      },
+      "howToUse": {
+        "copy": "Paste in the clause or advice, tell it who the client is, and it drafts an explanation in their language. You edit for accuracy, then send.",
+        "videoBadge": "In production",
+        "videoCaption": "Watch a clause turned into a client-ready explanation in under a minute."
+      },
+      "download": {
+        "copy": "No installation to manage. Sign in through your browser and it's ready to use.",
+        "videoBadge": "In production",
+        "videoCaption": "Signing in and running your first explanation takes under five minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Two tools, two use cases: one for explaining a specific clause, one for drafting a fuller client letter.",
+      "tools": [
+        {
+          "name": "Plainly",
+          "icon": "<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/>",
+          "pointers": [
+            "Rewrites a clause or judgment as a plain-English explanation.",
+            "Lets you set the reading level for the client."
+          ]
+        },
+        {
+          "name": "Briefline",
+          "icon": "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><path d=\"M14 2v6h6\"/>",
+          "pointers": [
+            "Drafts a full client letter from your internal advice.",
+            "Flags legal terms it couldn't simplify, so you check them by hand."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "2"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 5 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared with the court"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "combing-through-emails",
@@ -13,7 +85,95 @@
     "category": "clients",
     "description": "Search years of emails in seconds to find that one message.",
     "icon": "<rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"m22 6-10 6L2 6\"/>",
-    "toolsCount": 4
+    "toolsCount": 4,
+    "detail": {
+      "heroDesc": "Search years of correspondence in seconds instead of scrolling through folders.",
+      "overview": {
+        "paragraphs": [
+          "The email exists. You know you sent it, or the client did, sometime in the last two years. Finding it means guessing search terms and scrolling past hundreds of near-misses.",
+          "AI search tools read across your entire mailbox — not just subject lines — and understand what you mean, not just what you type. Ask “when did Tan & Co agree to the revised timeline” and get the actual thread, not a list of keyword matches."
+        ],
+        "callout": "These tools read your mailbox to answer your question — they don't send anything, forward anything, or act on your behalf.",
+        "whatItCanDo": [
+          "Find a specific email or attachment from a plain-English description.",
+          "Summarise a long thread into what was actually agreed.",
+          "Search across shared mailboxes and matter folders in one query."
+        ]
+      },
+      "howToUse": {
+        "copy": "Connect your mailbox once, then search in plain English from a sidebar or a chat box — no more guessing exact keywords.",
+        "videoBadge": "In production",
+        "videoCaption": "See a two-year-old thread found and summarised in seconds."
+      },
+      "download": {
+        "copy": "Installs as a browser extension or mailbox add-in — no separate app to manage.",
+        "videoBadge": "In production",
+        "videoCaption": "Connecting your mailbox takes about three minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "These cover the range: quick search, thread summaries, and cross-mailbox search for firms with shared inboxes.",
+      "tools": [
+        {
+          "name": "Findmail",
+          "icon": "<circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/>",
+          "pointers": [
+            "Plain-English search across your whole mailbox.",
+            "Surfaces the exact message and attachment, not just a folder."
+          ]
+        },
+        {
+          "name": "Threadline",
+          "icon": "<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/>",
+          "pointers": [
+            "Summarises a long email thread into what was actually agreed.",
+            "Links every summary point back to the original message."
+          ]
+        },
+        {
+          "name": "Inboxscope",
+          "icon": "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\"/>",
+          "pointers": [
+            "Searches shared mailboxes and matter folders in one query.",
+            "Respects existing access permissions — no new exposure."
+          ]
+        },
+        {
+          "name": "Correspond",
+          "icon": "<path d=\"m12 2 9 5-9 5-9-5z\"/><path d=\"m3 12 9 5 9-5\"/><path d=\"m3 17 9 5 9-5\"/>",
+          "pointers": [
+            "Builds a timeline of correspondence for a matter automatically.",
+            "Exports the timeline for use in a bundle or affidavit."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "4"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 10 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own mailbox; nothing shared externally"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "auto-language-translation",
@@ -21,7 +181,87 @@
     "category": "clients",
     "description": "Draft and read emails across languages without losing the meaning.",
     "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M2 12h20\"/><path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"/>",
-    "toolsCount": 3
+    "toolsCount": 3,
+    "detail": {
+      "heroDesc": "Draft and read cross-border correspondence without losing the meaning in translation.",
+      "overview": {
+        "paragraphs": [
+          "A client writes in Mandarin, or a counterparty's letter arrives in Bahasa, and a rough machine translation is either not trustworthy enough to act on or takes as long to get checked as writing the reply yourself.",
+          "AI translation tools built for legal correspondence keep defined terms and legal phrasing consistent, and flag anything ambiguous instead of guessing. You still read the final version before it goes out — these tools remove the first-draft slog, not your judgment."
+        ],
+        "callout": "Every translation is a draft. For anything that matters — a notice, a demand, a filing — have it checked by a fluent speaker before it's relied on.",
+        "whatItCanDo": [
+          "Translate incoming correspondence while flagging ambiguous phrasing.",
+          "Draft outgoing letters in the recipient's language from your English draft.",
+          "Keep defined terms consistent across a whole correspondence chain."
+        ]
+      },
+      "howToUse": {
+        "copy": "Paste in the letter, pick the target language, and it drafts a translation with anything uncertain highlighted for you to check.",
+        "videoBadge": "In production",
+        "videoCaption": "See a client letter translated and flagged for review in under a minute."
+      },
+      "download": {
+        "copy": "Works in your browser — no installation, and nothing stored beyond your session unless you save it.",
+        "videoBadge": "In production",
+        "videoCaption": "Getting your first translation takes about two minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Three tools, ranging from quick one-off translation to a dedicated legal-terminology glossary.",
+      "tools": [
+        {
+          "name": "Crosslang",
+          "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M2 12h20\"/><path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"/>",
+          "pointers": [
+            "Translates correspondence while flagging ambiguous phrasing.",
+            "Supports the languages most common in cross-border matters here."
+          ]
+        },
+        {
+          "name": "Termkeep",
+          "icon": "<path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"/><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"/>",
+          "pointers": [
+            "Maintains a glossary of defined terms so translations stay consistent.",
+            "Shared across a matter team so everyone translates terms the same way."
+          ]
+        },
+        {
+          "name": "Draftpair",
+          "icon": "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><path d=\"M14 2v6h6\"/>",
+          "pointers": [
+            "Drafts an outgoing letter in the recipient's language from your English draft.",
+            "Shows both versions side by side for comparison before sending."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "3"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 5 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared externally"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "responding-to-clients-empathetically",
@@ -29,7 +269,79 @@
     "category": "clients",
     "description": "Reply faster with the right tone, even on a hard day.",
     "icon": "<path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/>",
-    "toolsCount": 2
+    "toolsCount": 2,
+    "detail": {
+      "heroDesc": "Reply to a client faster, with the right tone, even when the news is bad.",
+      "overview": {
+        "paragraphs": [
+          "A worried client's message deserves a reply that's both accurate and reads as if you actually had time to think about how they'd feel reading it. On a packed day, one of those two things usually gives.",
+          "AI tools draft a reply from your notes or a quick voice memo, matched to the tone the situation calls for — reassuring, firm, or matter-of-fact. You adjust it to sound like you and send it. The legal content is still yours to check."
+        ],
+        "callout": "Tone drafting doesn't replace judgment about what to say — it saves you from starting the reply from a blank page.",
+        "whatItCanDo": [
+          "Draft a client reply from short notes or a voice memo, in the right tone.",
+          "Offer a few tone options for the same message — reassuring, direct, formal.",
+          "Flag replies that read as overly casual for a serious update."
+        ]
+      },
+      "howToUse": {
+        "copy": "Dictate or type a quick note on what happened, and it drafts a client-ready reply in a tone you pick — you edit and send.",
+        "videoBadge": "In production",
+        "videoCaption": "See a rushed voice memo turned into a considered client email."
+      },
+      "download": {
+        "copy": "Available as a browser add-in for your existing email client — no separate app.",
+        "videoBadge": "In production",
+        "videoCaption": "Setting it up alongside your inbox takes about three minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Two tools that work well together: one for drafting the reply, one for a quick tone check before you hit send.",
+      "tools": [
+        {
+          "name": "Tenor",
+          "icon": "<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/>",
+          "pointers": [
+            "Drafts a client reply from short notes or a voice memo.",
+            "Offers a few tone options for the same underlying message."
+          ]
+        },
+        {
+          "name": "Readback",
+          "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 11.5 2 2 4-4\"/>",
+          "pointers": [
+            "Reviews a drafted reply and flags tone that may land badly.",
+            "Works as a quick check before sending, not a rewrite."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "2"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 5 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared externally"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "reviewing-past-correspondence",
@@ -37,7 +349,87 @@
     "category": "clients",
     "description": "Pull up what you told a client before, so your advice stays consistent.",
     "icon": "<path d=\"M3 3v5h5\"/><path d=\"M3.05 13a9 9 0 1 0 1.9-7.4L3 8\"/><path d=\"M12 7v5l4 2\"/>",
-    "toolsCount": 3
+    "toolsCount": 3,
+    "detail": {
+      "heroDesc": "Pull up what you told a client before, so today's advice stays consistent with yesterday's.",
+      "overview": {
+        "paragraphs": [
+          "A client asks a follow-up question six months after the last one, and before you answer you need to know exactly what you told them then — not roughly what you remember telling them.",
+          "AI tools search your correspondence and file notes for prior advice on a matter and summarise it before you reply. You still confirm it against the file for anything material, but you're starting from what was actually said, not memory."
+        ],
+        "callout": "Treat the summary as a pointer to the source, not the source itself — check the underlying email or note before relying on it in fresh advice.",
+        "whatItCanDo": [
+          "Summarise prior advice given to a client on a matter.",
+          "Surface the specific email or note where something was said.",
+          "Flag if new advice looks inconsistent with an earlier position."
+        ]
+      },
+      "howToUse": {
+        "copy": "Ask in plain English what you told a client before, and it pulls the relevant correspondence and summarises it, with links back to the source.",
+        "videoBadge": "In production",
+        "videoCaption": "See a six-month-old position recalled and summarised in seconds."
+      },
+      "download": {
+        "copy": "Connects to your existing mailbox and document management system — nothing new to install.",
+        "videoBadge": "In production",
+        "videoCaption": "Connecting your systems takes about five minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Three tools spanning correspondence recall, file-note search, and consistency checking.",
+      "tools": [
+        {
+          "name": "Recall",
+          "icon": "<circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/>",
+          "pointers": [
+            "Summarises prior advice on a matter from correspondence and notes.",
+            "Links every summary point back to the source document."
+          ]
+        },
+        {
+          "name": "Fileline",
+          "icon": "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\"/>",
+          "pointers": [
+            "Searches file notes specifically, separate from email.",
+            "Organises results by matter and date automatically."
+          ]
+        },
+        {
+          "name": "Consistcheck",
+          "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 11.5 2 2 4-4\"/>",
+          "pointers": [
+            "Flags if a new draft looks inconsistent with earlier advice.",
+            "Runs as a check before you send, not an automatic block."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "3"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 10 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared externally"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "billings-and-invoices",
@@ -64,7 +456,8 @@
       "howToUse": {
         "copy": "The tool runs quietly in the background of your day. At the end of it, it hands you a list of suggested entries — you tick, edit or discard, and the approved ones move to your invoice.",
         "videoBadge": "2 min",
-        "videoCaption": "Watch how PointOne captures your day and drafts the entries for you to approve."
+        "videoCaption": "Watch how PointOne captures your day and drafts the entries for you to approve.",
+        "videoSrc": "/videos/billings-invoices-how-to-use.mp4"
       },
       "download": {
         "copy": "No installation to manage. You download a small desktop app, sign in once, and it starts watching your work the same day.",
@@ -103,12 +496,30 @@
         }
       ],
       "quickFacts": [
-        { "label": "Tools reviewed", "value": "3" },
-        { "label": "Time to first use", "value": "About 10 minutes" },
-        { "label": "Skill needed", "value": "None — point and click" },
-        { "label": "Where your data goes", "value": "Your own account; nothing shared with the court" },
-        { "label": "Cost", "value": "Free trial, then monthly" },
-        { "label": "Last updated", "value": "August 2026" }
+        {
+          "label": "Tools reviewed",
+          "value": "3"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 10 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared with the court"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
       ]
     }
   },
@@ -118,7 +529,79 @@
     "category": "administrative",
     "description": "Sort, name and organise bundles and exhibits without the busywork.",
     "icon": "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\"/>",
-    "toolsCount": 2
+    "toolsCount": 2,
+    "detail": {
+      "heroDesc": "Sort, name and organise exhibits and AEICs without losing an afternoon to it.",
+      "overview": {
+        "paragraphs": [
+          "Before a bundle can go out, every exhibit needs the right name, the right order, and a page reference that actually matches the affidavit. It's necessary work and it eats hours that don't bill.",
+          "AI tools read a folder of documents, suggest names and an order based on content and date, and build the reference list for you. You review the proposed order before anything is finalised — the tool proposes, you approve."
+        ],
+        "callout": "The suggested order and naming are a starting point. You check the final bundle against the affidavit before it's filed.",
+        "whatItCanDo": [
+          "Suggest exhibit names and order from document content and dates.",
+          "Build a reference list matching exhibits to affidavit paragraphs.",
+          "Flag documents that appear to be missing from a claimed set."
+        ]
+      },
+      "howToUse": {
+        "copy": "Drop a folder of documents in, and it proposes names, an order, and a reference list — you adjust and approve before it's finalised.",
+        "videoBadge": "In production",
+        "videoCaption": "Watch a folder of loose exhibits turned into an ordered, named bundle."
+      },
+      "download": {
+        "copy": "Runs as a desktop app that watches a folder you choose — no manual uploads.",
+        "videoBadge": "In production",
+        "videoCaption": "Setting up your first watched folder takes about five minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Two tools that cover the two halves of the job: sorting the files, and matching them to the affidavit.",
+      "tools": [
+        {
+          "name": "Bundlekeep",
+          "icon": "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\"/>",
+          "pointers": [
+            "Suggests exhibit names and order from document content and dates.",
+            "Exports a bundle ready for filing in the required format."
+          ]
+        },
+        {
+          "name": "Refline",
+          "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"m9 12 2 2 4-4\"/>",
+          "pointers": [
+            "Matches exhibits to the paragraphs that cite them in the affidavit.",
+            "Flags a cited exhibit that appears to be missing."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "2"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 10 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared with the court"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "tracking-time-on-files",
@@ -126,7 +609,95 @@
     "category": "administrative",
     "description": "Record hours as you work, so no billable time slips away.",
     "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/>",
-    "toolsCount": 4
+    "toolsCount": 4,
+    "detail": {
+      "heroDesc": "Record hours as you work, so billable time doesn't slip away between tasks.",
+      "overview": {
+        "paragraphs": [
+          "Time tracking fails for the same reason billing does: it happens in the gaps, and the gaps get skipped when the day is full. By the time you sit down to log hours, half of them are gone from memory.",
+          "AI time-tracking tools watch which document, email or call you're on and log the time automatically, tagged to the right matter. You review and adjust the log rather than reconstructing it from scratch."
+        ],
+        "callout": "The log is a draft of your day, not a final timesheet — you correct anything mistagged before it's submitted.",
+        "whatItCanDo": [
+          "Log time automatically against the matter you're working on.",
+          "Flag gaps in the day that look like unlogged billable work.",
+          "Roll up a week's logged time into a timesheet ready for review."
+        ]
+      },
+      "howToUse": {
+        "copy": "It runs quietly in the background and tags time to matters as you work — at day's end you review and correct the log before it's submitted.",
+        "videoBadge": "In production",
+        "videoCaption": "Watch a day's scattered work turned into a tagged, reviewable timesheet."
+      },
+      "download": {
+        "copy": "A lightweight desktop app that runs in the background — no manual timers to remember to start.",
+        "videoBadge": "In production",
+        "videoCaption": "Installing and connecting it to your matters takes about five minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Four tools covering automatic capture, gap detection, timesheet rollup, and integration with your billing system.",
+      "tools": [
+        {
+          "name": "Timekeep",
+          "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/>",
+          "pointers": [
+            "Logs time automatically against the matter you're working on.",
+            "Runs quietly in the background all day."
+          ]
+        },
+        {
+          "name": "Gapflag",
+          "icon": "<circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/>",
+          "pointers": [
+            "Flags stretches of the day that look like unlogged billable work.",
+            "Suggests a matter based on what was open at the time."
+          ]
+        },
+        {
+          "name": "Rollsheet",
+          "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"m9 12 2 2 4-4\"/>",
+          "pointers": [
+            "Rolls up a week's logged time into a timesheet for review.",
+            "Highlights entries that need your edit before submission."
+          ]
+        },
+        {
+          "name": "Ledgerline",
+          "icon": "<path d=\"m12 2 9 5-9 5-9-5z\"/><path d=\"m3 12 9 5 9-5\"/><path d=\"m3 17 9 5 9-5\"/>",
+          "pointers": [
+            "Syncs approved time entries into your existing billing system.",
+            "Keeps a single source of truth across time tracking and billing."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "4"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 10 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared with the court"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "contacting-court-for-filing-status",
@@ -134,7 +705,79 @@
     "category": "administrative",
     "description": "Find the right contact and track where a filing stands.",
     "icon": "<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z\"/>",
-    "toolsCount": 2
+    "toolsCount": 2,
+    "detail": {
+      "heroDesc": "Find the right contact and track where a filing stands, without a chain of phone calls.",
+      "overview": {
+        "paragraphs": [
+          "Chasing a filing's status usually means working out which registry or line to call, waiting on hold, then repeating the same explanation to whoever picks up. It's time spent, but not on the matter.",
+          "AI tools keep an up-to-date directory of the right contact point for each type of filing, and track known status update patterns so you know when to expect movement before you call. They don't file or speak to the court on your behalf."
+        ],
+        "callout": "These tools help you find who to contact and when to expect an update — they don't submit filings or speak to the court for you.",
+        "whatItCanDo": [
+          "Find the correct registry or contact point for a filing type.",
+          "Estimate when a status update is typically expected.",
+          "Keep a log of past enquiries for a matter in one place."
+        ]
+      },
+      "howToUse": {
+        "copy": "Tell it what was filed and where, and it points you to the right contact and a realistic timeline before you pick up the phone.",
+        "videoBadge": "In production",
+        "videoCaption": "See the right registry contact surfaced in seconds."
+      },
+      "download": {
+        "copy": "Works in your browser — nothing to install.",
+        "videoBadge": "In production",
+        "videoCaption": "Your first lookup takes under a minute.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Two tools: one for finding the right contact, one for logging and tracking enquiries over time.",
+      "tools": [
+        {
+          "name": "Registrypoint",
+          "icon": "<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z\"/>",
+          "pointers": [
+            "Finds the correct registry or contact point for a filing type.",
+            "Kept current as court contact points change."
+          ]
+        },
+        {
+          "name": "Filetrack",
+          "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"m9 12 2 2 4-4\"/>",
+          "pointers": [
+            "Logs past enquiries on a filing so nothing is chased twice.",
+            "Estimates when a status update is typically expected."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "2"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 5 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared with the court"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "finding-documents-on-e-litigation",
@@ -142,7 +785,87 @@
     "category": "administrative",
     "description": "Locate documents in the portal without clicking through every case.",
     "icon": "<circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/>",
-    "toolsCount": 3
+    "toolsCount": 3,
+    "detail": {
+      "heroDesc": "Locate a client's documents on the portal without clicking through every case.",
+      "overview": {
+        "paragraphs": [
+          "The document exists somewhere in the portal, filed under a case reference you'd need to look up first, in a folder structure that doesn't match how you'd search for it.",
+          "AI tools connect to the portal on your behalf, using your existing access, and let you search in plain English instead of navigating the folder tree. They retrieve what you already have rights to see — nothing more."
+        ],
+        "callout": "Access is limited to documents you're already entitled to see on the portal — these tools search faster, they don't grant new access.",
+        "whatItCanDo": [
+          "Search across a case's filed documents in plain English.",
+          "Pull a document straight into your matter file once found.",
+          "Alert you when a new document is filed on a case you're watching."
+        ]
+      },
+      "howToUse": {
+        "copy": "Connect your portal login once, then search in plain English — it retrieves the document and can file it straight into your matter folder.",
+        "videoBadge": "In production",
+        "videoCaption": "See a document found on the portal in seconds instead of minutes of clicking."
+      },
+      "download": {
+        "copy": "A browser extension that layers over the existing portal — no separate login to manage.",
+        "videoBadge": "In production",
+        "videoCaption": "Connecting your existing portal access takes about three minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Three tools: search, auto-filing into your matter folder, and alerts for new filings.",
+      "tools": [
+        {
+          "name": "Portalfind",
+          "icon": "<circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/>",
+          "pointers": [
+            "Searches a case's filed documents in plain English.",
+            "Uses your existing portal access — no separate login."
+          ]
+        },
+        {
+          "name": "Autofile",
+          "icon": "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\"/>",
+          "pointers": [
+            "Pulls a found document straight into your matter file.",
+            "Names and organises it to match your firm's convention."
+          ]
+        },
+        {
+          "name": "Casewatch",
+          "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 11.5 2 2 4-4\"/>",
+          "pointers": [
+            "Alerts you when a new document is filed on a watched case.",
+            "Sends a daily digest instead of one alert per filing, if you prefer."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "3"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 5 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared with the court"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "extracting-templates-from-practice-directions",
@@ -150,7 +873,79 @@
     "category": "procedural",
     "description": "Pull the forms and templates you need straight from the directions.",
     "icon": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/>",
-    "toolsCount": 2
+    "toolsCount": 2,
+    "detail": {
+      "heroDesc": "Pull the exact form or template you need straight from the practice directions.",
+      "overview": {
+        "paragraphs": [
+          "Practice directions run to hundreds of pages across multiple appendices, and the form you need is in there somewhere, cross-referenced from a paragraph three sections away.",
+          "AI tools search the current practice directions and return the specific template or form, already matched to your case type, with the source paragraph cited so you can verify it's current."
+        ],
+        "callout": "Always check the cited paragraph in the current practice directions — these tools point you to the right form, they don't guarantee it hasn't since been amended.",
+        "whatItCanDo": [
+          "Find the correct form or template for a given case type and stage.",
+          "Cite the source paragraph in the practice directions.",
+          "Flag when a linked template appears to have been superseded."
+        ]
+      },
+      "howToUse": {
+        "copy": "Describe your case type and the stage you're at, and it returns the matching form with the source paragraph cited for you to check.",
+        "videoBadge": "In production",
+        "videoCaption": "See the right template surfaced from hundreds of pages in seconds."
+      },
+      "download": {
+        "copy": "Works in your browser — nothing to install.",
+        "videoBadge": "In production",
+        "videoCaption": "Your first search takes under a minute.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Two tools: one for finding the form, one for flagging when the directions have moved on since a template was last checked.",
+      "tools": [
+        {
+          "name": "Directfind",
+          "icon": "<path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"/><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"/>",
+          "pointers": [
+            "Finds the correct form for a case type and stage.",
+            "Cites the exact paragraph in the practice directions."
+          ]
+        },
+        {
+          "name": "Supersede",
+          "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 11.5 2 2 4-4\"/>",
+          "pointers": [
+            "Flags when a template appears to have been superseded by an amendment.",
+            "Checked against the current practice directions on a rolling basis."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "2"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 5 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared with the court"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "determining-best-legal-course-of-action",
@@ -158,7 +953,87 @@
     "category": "procedural",
     "description": "Map out your options and see which path the law supports.",
     "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z\"/>",
-    "toolsCount": 3
+    "toolsCount": 3,
+    "detail": {
+      "heroDesc": "Map out the options for a matter and see which path the law actually supports.",
+      "overview": {
+        "paragraphs": [
+          "A matter often has more than one viable route forward — settle, litigate, apply for interim relief — and setting out the trade-offs for a client or a partner takes time you don't always have before the next call.",
+          "AI tools take the facts of a matter and lay out the plausible courses of action, with the legal basis and rough likelihood of success for each, as a starting structure for your own analysis and advice."
+        ],
+        "callout": "This is a starting structure for your own analysis, not legal advice on its own — the reasoning and the final recommendation to the client are yours.",
+        "whatItCanDo": [
+          "Lay out plausible courses of action from the facts of a matter.",
+          "Cite the legal basis for each option.",
+          "Flag options that carry unusual procedural risk or a tight limitation period."
+        ]
+      },
+      "howToUse": {
+        "copy": "Summarise the matter's facts, and it lays out the plausible courses of action with legal basis and risk flags — you build your advice from there.",
+        "videoBadge": "In production",
+        "videoCaption": "See a set of facts turned into a structured set of options in minutes."
+      },
+      "download": {
+        "copy": "Works in your browser — nothing to install.",
+        "videoBadge": "In production",
+        "videoCaption": "Getting your first option map takes about ten minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Three tools: options mapping, limitation-period checking, and a second-opinion style consistency check.",
+      "tools": [
+        {
+          "name": "Pathmap",
+          "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z\"/>",
+          "pointers": [
+            "Lays out plausible courses of action from a matter's facts.",
+            "Cites the legal basis for each option it surfaces."
+          ]
+        },
+        {
+          "name": "Limitguard",
+          "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/>",
+          "pointers": [
+            "Flags limitation periods relevant to the options surfaced.",
+            "Warns early enough to act, not on the day a deadline lapses."
+          ]
+        },
+        {
+          "name": "Scale",
+          "icon": "<path d=\"M12 3v18\"/><path d=\"M5 8h14\"/><path d=\"M5 8 2 15a3 3 0 0 0 6 0z\"/><path d=\"M19 8l-3 7a3 3 0 0 0 6 0z\"/>",
+          "pointers": [
+            "Checks a proposed course of action against similar past matters.",
+            "Surfaces precedent that supports or undercuts the chosen path."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "3"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 10 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared with the court"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "ensuring-compliance-with-roc",
@@ -166,7 +1041,87 @@
     "category": "procedural",
     "description": "Check your filing against the rules before you send it.",
     "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 11.5 2 2 4-4\"/>",
-    "toolsCount": 3
+    "toolsCount": 3,
+    "detail": {
+      "heroDesc": "Check a submission against the Rules of Court and Practice Directions before you file it.",
+      "overview": {
+        "paragraphs": [
+          "A rejected filing over a formatting or procedural slip costs more time than getting it right the first time would have — but the rules run across multiple documents that are easy to miss a cross-reference in.",
+          "AI compliance tools check a draft submission against the current Rules of Court and Practice Directions, and flag specific clauses it may fall short of, with the source cited so you can verify and fix before filing."
+        ],
+        "callout": "A clean check reduces risk, it doesn't guarantee acceptance — the final filing decision and responsibility for compliance remain yours.",
+        "whatItCanDo": [
+          "Check a draft submission against the current Rules of Court and Practice Directions.",
+          "Cite the specific rule a submission may fall short of.",
+          "Flag formatting requirements that are easy to miss by hand."
+        ]
+      },
+      "howToUse": {
+        "copy": "Upload your draft submission, and it checks it against the current rules, flagging specific issues with the source cited so you can fix them before filing.",
+        "videoBadge": "In production",
+        "videoCaption": "See a draft submission checked against the rules in minutes, not an afternoon."
+      },
+      "download": {
+        "copy": "Works in your browser — nothing to install.",
+        "videoBadge": "In production",
+        "videoCaption": "Your first check takes about five minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Three tools covering rule compliance, formatting, and a final pre-filing checklist.",
+      "tools": [
+        {
+          "name": "Complydraft",
+          "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 11.5 2 2 4-4\"/>",
+          "pointers": [
+            "Checks a draft submission against the current Rules of Court and Practice Directions.",
+            "Cites the specific rule a submission may fall short of."
+          ]
+        },
+        {
+          "name": "Formatcheck",
+          "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"m9 12 2 2 4-4\"/>",
+          "pointers": [
+            "Checks formatting requirements — margins, pagination, cover pages.",
+            "Flags issues that are otherwise easy to miss by hand."
+          ]
+        },
+        {
+          "name": "Filereview",
+          "icon": "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\"/>",
+          "pointers": [
+            "Runs a final checklist before filing, combining rule and format checks.",
+            "Produces a short report you can keep on file."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "3"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 10 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared with the court"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "looking-through-unfamiliar-legislation",
@@ -174,7 +1129,95 @@
     "category": "substantive",
     "description": "Find the section you need in an Act you've never read before.",
     "icon": "<path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"/><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"/>",
-    "toolsCount": 4
+    "toolsCount": 4,
+    "detail": {
+      "heroDesc": "Find the section you actually need in an Act you've never had to read before.",
+      "overview": {
+        "paragraphs": [
+          "An unfamiliar Act reads like a maze the first time — definitions in one part, the operative provision in another, and an exception buried in a schedule that changes everything.",
+          "AI tools let you ask a plain-English question about an Act and get pointed to the exact section that answers it, with related definitions and exceptions surfaced alongside — so you read the two paragraphs that matter, not the whole Act."
+        ],
+        "callout": "Read the actual section before relying on it — these tools point you to the right place faster, they don't replace reading the primary legislation.",
+        "whatItCanDo": [
+          "Answer a plain-English question by pointing to the exact section of an Act.",
+          "Surface related definitions and exceptions you might otherwise miss.",
+          "Flag when a section has been recently amended."
+        ]
+      },
+      "howToUse": {
+        "copy": "Ask your question in plain English, and it points you to the exact section, with related definitions and exceptions surfaced alongside.",
+        "videoBadge": "In production",
+        "videoCaption": "See an unfamiliar Act narrowed down to the two paragraphs that matter."
+      },
+      "download": {
+        "copy": "Works in your browser — nothing to install.",
+        "videoBadge": "In production",
+        "videoCaption": "Your first search takes under a minute.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Four tools spanning statute search, amendment tracking, definitions lookup, and cross-referencing between Acts.",
+      "tools": [
+        {
+          "name": "Statutefind",
+          "icon": "<path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"/><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"/>",
+          "pointers": [
+            "Answers a plain-English question by pointing to the exact section.",
+            "Surfaces related definitions and exceptions alongside the answer."
+          ]
+        },
+        {
+          "name": "Amendwatch",
+          "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 11.5 2 2 4-4\"/>",
+          "pointers": [
+            "Flags when a section you're relying on has been recently amended.",
+            "Sends an alert rather than requiring you to re-check manually."
+          ]
+        },
+        {
+          "name": "Definecheck",
+          "icon": "<circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/>",
+          "pointers": [
+            "Looks up how a term is defined across the whole Act, not just locally.",
+            "Flags where a term is defined differently in a related Act."
+          ]
+        },
+        {
+          "name": "Crosscite",
+          "icon": "<path d=\"m12 2 9 5-9 5-9-5z\"/><path d=\"m3 12 9 5 9-5\"/><path d=\"m3 17 9 5 9-5\"/>",
+          "pointers": [
+            "Traces how one Act cross-references another on a given point.",
+            "Builds a short reading list of the sections that matter."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "4"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 5 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared externally"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "reducing-time-spent-on-research",
@@ -182,7 +1225,87 @@
     "category": "substantive",
     "description": "Get to the relevant cases and provisions faster.",
     "icon": "<path d=\"M5 3h14\"/><path d=\"M5 21h14\"/><path d=\"M7 3v2a5 5 0 0 0 10 0V3\"/><path d=\"M7 21v-2a5 5 0 0 1 10 0v2\"/>",
-    "toolsCount": 3
+    "toolsCount": 3,
+    "detail": {
+      "heroDesc": "Get to the relevant cases and provisions faster, without reading everything that mentions the topic.",
+      "overview": {
+        "paragraphs": [
+          "Legal research often means reading twenty cases to find the two that actually matter, because a keyword search returns everything that mentions the term, not everything that's actually on point.",
+          "AI research tools understand what your question is actually asking and rank results by relevance to it, summarising each before you decide whether to read it in full — cutting the twenty down to the two, faster."
+        ],
+        "callout": "Read the cases the tool surfaces before citing them — a summary is a starting point for your own reading, not a substitute for it.",
+        "whatItCanDo": [
+          "Rank case law and provisions by relevance to your actual question.",
+          "Summarise a case before you decide whether to read it in full.",
+          "Track a line of authority forward to see if it's still good law."
+        ]
+      },
+      "howToUse": {
+        "copy": "Ask your research question in plain English, and it ranks and summarises the relevant cases and provisions before you read the full text.",
+        "videoBadge": "In production",
+        "videoCaption": "See a research question narrowed from twenty cases to two in minutes."
+      },
+      "download": {
+        "copy": "Works in your browser — nothing to install.",
+        "videoBadge": "In production",
+        "videoCaption": "Your first research query takes under a minute.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Three tools covering research ranking, case summarisation, and tracking whether authority is still good law.",
+      "tools": [
+        {
+          "name": "Relevantfind",
+          "icon": "<circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/>",
+          "pointers": [
+            "Ranks case law and provisions by relevance to your actual question.",
+            "Cuts through keyword-matched noise to the cases on point."
+          ]
+        },
+        {
+          "name": "Casebrief",
+          "icon": "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><path d=\"M14 2v6h6\"/>",
+          "pointers": [
+            "Summarises a case before you decide whether to read it in full.",
+            "Highlights the holding most relevant to your query."
+          ]
+        },
+        {
+          "name": "Stillgood",
+          "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 11.5 2 2 4-4\"/>",
+          "pointers": [
+            "Tracks whether a case is still good law, forward through later decisions.",
+            "Flags if a line of authority has been distinguished or overruled."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "3"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 5 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared externally"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "researching-regulations-under-statutory-bodies",
@@ -190,7 +1313,79 @@
     "category": "substantive",
     "description": "Find what these bodies require, without digging through notices.",
     "icon": "<line x1=\"3\" y1=\"22\" x2=\"21\" y2=\"22\"/><line x1=\"6\" y1=\"18\" x2=\"6\" y2=\"11\"/><line x1=\"10\" y1=\"18\" x2=\"10\" y2=\"11\"/><line x1=\"14\" y1=\"18\" x2=\"14\" y2=\"11\"/><line x1=\"18\" y1=\"18\" x2=\"18\" y2=\"11\"/><path d=\"M12 2 20 7H4z\"/>",
-    "toolsCount": 2
+    "toolsCount": 2,
+    "detail": {
+      "heroDesc": "Find what MOM, ACRA, LTA, URA or HDB actually require, without digging through notices.",
+      "overview": {
+        "paragraphs": [
+          "Statutory bodies publish requirements across circulars, guidelines and notices that update on their own schedule, in their own format, scattered across a website that isn't built for legal research.",
+          "AI tools track these bodies' published requirements and let you ask a plain-English question about what applies to a given situation, with the source notice cited so you can confirm it's current."
+        ],
+        "callout": "Confirm against the source notice before relying on an answer — these bodies update requirements on their own schedule, and a summary can lag by days.",
+        "whatItCanDo": [
+          "Answer a plain-English question about a statutory body's current requirements.",
+          "Cite the specific circular, guideline or notice the answer is based on.",
+          "Alert you when a body updates a requirement you're tracking."
+        ]
+      },
+      "howToUse": {
+        "copy": "Ask what a statutory body requires for your situation, and it answers with the source notice cited so you can verify it's current.",
+        "videoBadge": "In production",
+        "videoCaption": "See a scattered set of circulars turned into a direct answer in seconds."
+      },
+      "download": {
+        "copy": "Works in your browser — nothing to install.",
+        "videoBadge": "In production",
+        "videoCaption": "Your first query takes under a minute.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Two tools: one for answering the question, one for tracking updates over time.",
+      "tools": [
+        {
+          "name": "Regfind",
+          "icon": "<line x1=\"3\" y1=\"22\" x2=\"21\" y2=\"22\"/><line x1=\"6\" y1=\"18\" x2=\"6\" y2=\"11\"/><line x1=\"10\" y1=\"18\" x2=\"10\" y2=\"11\"/><line x1=\"14\" y1=\"18\" x2=\"14\" y2=\"11\"/><line x1=\"18\" y1=\"18\" x2=\"18\" y2=\"11\"/><path d=\"M12 2 20 7H4z\"/>",
+          "pointers": [
+            "Answers a plain-English question about a statutory body's requirements.",
+            "Cites the specific circular or notice the answer is based on."
+          ]
+        },
+        {
+          "name": "Noticewatch",
+          "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 11.5 2 2 4-4\"/>",
+          "pointers": [
+            "Alerts you when a tracked requirement is updated.",
+            "Covers MOM, ACRA, LTA, URA and HDB out of the box."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "2"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 5 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared externally"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   },
   {
     "slug": "finding-suitable-contract-template",
@@ -198,6 +1393,86 @@
     "category": "substantive",
     "description": "Start from a template that already fits your deal.",
     "icon": "<path d=\"M12 20h9\"/><path d=\"M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z\"/>",
-    "toolsCount": 3
+    "toolsCount": 3,
+    "detail": {
+      "heroDesc": "Start from a contract template that already fits the deal, instead of a generic one.",
+      "overview": {
+        "paragraphs": [
+          "A generic template gets you started, but reworking every clause that doesn't fit the actual deal often takes longer than it saved you — and things get missed under time pressure.",
+          "AI tools match a template to your deal's specifics — parties, jurisdiction, deal type — and pre-fill known details, so you're editing a document that's already 80% right instead of starting from zero."
+        ],
+        "callout": "A matched template is a starting point, not a finished contract — every clause still needs your review before it goes to the other side.",
+        "whatItCanDo": [
+          "Match a contract template to your deal's specifics.",
+          "Pre-fill known details like party names and jurisdiction.",
+          "Flag clauses in the template that commonly need negotiation for this deal type."
+        ]
+      },
+      "howToUse": {
+        "copy": "Describe the deal, and it matches a template and pre-fills what it can — you review and negotiate from a document that's already close to right.",
+        "videoBadge": "In production",
+        "videoCaption": "See a deal description turned into a pre-filled draft contract in minutes."
+      },
+      "download": {
+        "copy": "Works in your browser — nothing to install.",
+        "videoBadge": "In production",
+        "videoCaption": "Your first matched template takes about five minutes.",
+        "ctaLabel": "Try it",
+        "ctaNote": "Free trial, no card required."
+      },
+      "toolsIntro": "Three tools: template matching, clause negotiation flags, and a library of firm-approved templates.",
+      "tools": [
+        {
+          "name": "Templatematch",
+          "icon": "<path d=\"M12 20h9\"/><path d=\"M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z\"/>",
+          "pointers": [
+            "Matches a contract template to your deal's specifics.",
+            "Pre-fills known details like party names and jurisdiction."
+          ]
+        },
+        {
+          "name": "Negflag",
+          "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"m9 12 2 2 4-4\"/>",
+          "pointers": [
+            "Flags clauses that commonly need negotiation for a deal type.",
+            "Draws on patterns from past deals, not guesswork."
+          ]
+        },
+        {
+          "name": "Approvedlib",
+          "icon": "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><path d=\"M14 2v6h6\"/>",
+          "pointers": [
+            "Keeps your firm's approved templates in one searchable library.",
+            "Version-controlled, so everyone drafts from the current one."
+          ]
+        }
+      ],
+      "quickFacts": [
+        {
+          "label": "Tools reviewed",
+          "value": "3"
+        },
+        {
+          "label": "Time to first use",
+          "value": "About 5 minutes"
+        },
+        {
+          "label": "Skill needed",
+          "value": "None — point and click"
+        },
+        {
+          "label": "Where your data goes",
+          "value": "Your own account; nothing shared externally"
+        },
+        {
+          "label": "Cost",
+          "value": "Free trial, then monthly"
+        },
+        {
+          "label": "Last updated",
+          "value": "August 2026"
+        }
+      ]
+    }
   }
 ]

@@ -20,6 +20,7 @@ export type ProblemDetail = {
     copy: string;
     videoBadge: string;
     videoCaption: string;
+    videoSrc?: string;
   };
   download: {
     copy: string;
