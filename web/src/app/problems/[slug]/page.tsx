@@ -53,18 +53,20 @@ export default async function ProblemDetailPage(
 
       <section className="container detail-hero" aria-labelledby="detailTitle">
         <div>
-          <span
-            className="detail-hero__icon"
-            aria-hidden="true"
-            dangerouslySetInnerHTML={{ __html: wrapIcon(problem.icon, 26) }}
-          />
-          <div className="detail-hero__tags">
-            <span className="card__cat">{categoryLabel(problem.category)}</span>
-            {problem.practiceAreas?.map((pa) => (
-              <span key={pa} className="card__tag">
-                {practiceAreaLabel(pa)}
-              </span>
-            ))}
+          <div className="detail-hero__meta">
+            <span
+              className="detail-hero__icon"
+              aria-hidden="true"
+              dangerouslySetInnerHTML={{ __html: wrapIcon(problem.icon, 26) }}
+            />
+            <div className="detail-hero__tags">
+              <span className="card__cat">{categoryLabel(problem.category)}</span>
+              {problem.practiceAreas?.map((pa) => (
+                <span key={pa} className="card__tag">
+                  {practiceAreaLabel(pa)}
+                </span>
+              ))}
+            </div>
           </div>
           <h1 id="detailTitle">{problem.title}</h1>
           <p className="detail-hero__desc">

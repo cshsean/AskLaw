@@ -807,6 +807,12 @@ h1, h2, h3, h4 {
   gap: var(--s6);
   align-items: start;
 }
+.detail-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  margin-bottom: var(--s4);
+}
 .detail-hero__icon {
   width: 52px; height: 52px;
   border-radius: 12px;
@@ -814,7 +820,7 @@ h1, h2, h3, h4 {
   color: var(--accent);
   display: grid;
   place-items: center;
-  margin-bottom: var(--s4);
+  flex: none;
 }
 .detail-hero__tags {
   display: flex;
