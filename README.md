@@ -24,10 +24,6 @@ Planning and design mockup. No production build yet.
 | `web/` | Data-driven Next.js rebuild of the mockup (one `/problems/[slug]` route fed by `web/src/data/problems.json`) |
 | `product-video-pipeline/` | GenAI video pipeline pilot (Remotion + HeyGen) for one problem page, plus an admin test bench |
 
-## View the mockup
-
-Open `mockup/index.html` in any browser. No build step or dependencies — it works offline.
-
 ## Run the frontend (`web/`)
 
 Data-driven Next.js rebuild of the mockup (see `web/README.md`):
