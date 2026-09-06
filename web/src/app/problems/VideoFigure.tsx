@@ -3,11 +3,9 @@
 import { useState } from "react";
 
 export function VideoFigure({
-  badge,
   playLabel,
   src,
 }: {
-  badge: string;
   playLabel: string;
   src?: string;
 }) {
@@ -16,7 +14,6 @@ export function VideoFigure({
   if (src) {
     return (
       <figure className="video video--real">
-        <span className="video__badge">{badge}</span>
         <video
           controls
           preload="metadata"
@@ -32,7 +29,6 @@ export function VideoFigure({
 
   return (
     <figure className={`video video--pending${playing ? " is-playing" : ""}`}>
-      <span className="video__badge">{badge}</span>
       <button
         className="video__play"
         type="button"

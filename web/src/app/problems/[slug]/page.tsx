@@ -145,7 +145,6 @@ export default async function ProblemDetailPage(
                 </div>
 
                 <VideoFigure
-                  badge={detail.howToUse.videoBadge}
                   playLabel="Play: how it works"
                   src={detail.howToUse.videoSrc}
                 />
