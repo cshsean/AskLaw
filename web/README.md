@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AskLaw — web app
 
-## Getting Started
+Data-driven [Next.js](https://nextjs.org) (App Router) rebuild of the AskLaw directory. One
+`/problems/[slug]` route fed by `web/src/data/problems.json`, with client-side search/filter and a
+grounded chatbot assistant.
 
-First, run the development server:
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/data/problems.json`, `src/data/categories.json` — the directory content (single source of truth).
+- `src/app/page.tsx` — dashboard (search + category filters + problem cards).
+- `src/app/problems/[slug]/page.tsx` — problem detail.
+- `src/app/ChatWidget.tsx` — floating chat assistant UI.
+- `src/app/api/chat/route.ts` — chatbot endpoint (`POST /api/chat`).
+- `src/lib/search/` — lexical retrieval + no-LLM keyword fallback.
+- `src/lib/llm/` — OpenAI / Anthropic providers (structured output).
+- `src/lib/safety/` — input sanitization, slug allow-list, per-IP rate limiting.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Chatbot
 
-## Learn More
+`POST /api/chat` — body `{ "message": "..." }` →
 
-To learn more about Next.js, take a look at the following resources:
+```json
+{
+  "answer": "…",
+  "category": "administrative",
+  "matches": [{ "slug": "billings-and-invoices", "title": "…", "reason": "…" }],
+  "disclaimer": "AskLaw doesn't endorse any specific tool, and this isn't legal advice."
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Configure the LLM via `.env.local` (not committed):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+LLM_PROVIDER=openai     # openai | anthropic
+OPENAI_API_KEY=...      # or ANTHROPIC_API_KEY=...
+LLM_MODEL=gpt-4o-mini   # optional
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Without keys it runs a deterministic keyword matcher. Full design in `docs/chatbot-plan.md`.

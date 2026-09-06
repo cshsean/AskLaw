@@ -5,12 +5,27 @@ import Link from "next/link";
 import categories from "@/data/categories.json";
 import type { Problem } from "@/data/types";
 
+const PRACTICE_AREAS = [
+  { key: "family-law", label: "family law" },
+  { key: "criminal-law", label: "criminal law" },
+];
+
 export function FilterableGrid({ problems }: { problems: Problem[] }) {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState("all");
+  const [activeTags, setActiveTags] = useState<string[]>([]);
 
   const categoryLabel = (key: string) =>
     categories.find((c) => c.key === key)?.label ?? key;
+
+  const practiceAreaLabel = (key: string) =>
+    PRACTICE_AREAS.find((pa) => pa.key === key)?.label ?? key;
+
+  function toggleTag(key: string) {
+    setActiveTags((prev) =>
+      prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]
+    );
+  }
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -20,9 +35,12 @@ export function FilterableGrid({ problems }: { problems: Problem[] }) {
         p.title.toLowerCase().includes(q) ||
         p.description.toLowerCase().includes(q);
       const matchCat = active === "all" || p.category === active;
-      return matchQ && matchCat;
+      const matchTag =
+        activeTags.length === 0 ||
+        (p.practiceAreas ?? []).some((pa) => activeTags.includes(pa));
+      return matchQ && matchCat && matchTag;
     });
-  }, [problems, query, active]);
+  }, [problems, query, active, activeTags]);
 
   return (
     <>
@@ -81,6 +99,26 @@ export function FilterableGrid({ problems }: { problems: Problem[] }) {
             {visible.length} {visible.length === 1 ? "problem" : "problems"}
           </span>
         </div>
+
+        <div className="tag-filters">
+          <span className="tag-filters__label">Practice area</span>
+          <div
+            className="pills pills--tags"
+            role="group"
+            aria-label="Filter by practice area"
+          >
+            {PRACTICE_AREAS.map((pa) => (
+              <button
+                key={pa.key}
+                className="pill pill--tag"
+                aria-pressed={activeTags.includes(pa.key)}
+                onClick={() => toggleTag(pa.key)}
+              >
+                {pa.label}
+              </button>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="container" id="how-it-works" aria-label="All problems">
@@ -106,7 +144,14 @@ export function FilterableGrid({ problems }: { problems: Problem[] }) {
                 />
               </span>
               <h3 className="card__title">{p.title}</h3>
-              <span className="card__cat">{categoryLabel(p.category)}</span>
+              <span className="card__tags">
+                <span className="card__cat">{categoryLabel(p.category)}</span>
+                {p.practiceAreas?.map((pa) => (
+                  <span key={pa} className="card__tag">
+                    {practiceAreaLabel(pa)}
+                  </span>
+                ))}
+              </span>
               <p className="card__desc">{p.description}</p>
               <span className="card__meta">
                 <svg

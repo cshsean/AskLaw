@@ -459,13 +459,6 @@
         "videoCaption": "Watch how PointOne captures your day and drafts the entries for you to approve.",
         "videoSrc": "/videos/billings-invoices-how-to-use.mp4"
       },
-      "download": {
-        "copy": "No installation to manage. You download a small desktop app, sign in once, and it starts watching your work the same day.",
-        "videoBadge": "1 min",
-        "videoCaption": "Downloading and signing in takes under five minutes.",
-        "ctaLabel": "Download PointOne",
-        "ctaNote": "Free trial, no card required."
-      },
       "toolsIntro": "These work well together: one captures the time, one turns it into invoices, one keeps the ledger honest.",
       "tools": [
         {
@@ -868,6 +861,15 @@
     }
   },
   {
+    "slug": "tracking-divorce-timelines",
+    "title": "Tracking divorce timelines",
+    "category": "administrative",
+    "description": "Keep every deadline and milestone in a divorce matter on one clear timeline.",
+    "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M16 2v4M8 2v4M3 10h18\"/>",
+    "toolsCount": 2,
+    "practiceAreas": ["family-law"]
+  },
+  {
     "slug": "extracting-templates-from-practice-directions",
     "title": "Extracting templates from court practice directions",
     "category": "procedural",
@@ -1122,6 +1124,15 @@
         }
       ]
     }
+  },
+  {
+    "slug": "submitting-bail-applications",
+    "title": "Submitting bail applications",
+    "category": "procedural",
+    "description": "Draft and check a bail application before you file it with the court.",
+    "icon": "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><path d=\"M14 2v6h6\"/><path d=\"m9 15 2 2 4-4\"/>",
+    "toolsCount": 2,
+    "practiceAreas": ["criminal-law"]
   },
   {
     "slug": "looking-through-unfamiliar-legislation",
@@ -1474,5 +1485,14 @@
         }
       ]
     }
+  },
+  {
+    "slug": "calculate-family-maintenance",
+    "title": "Calculate family maintenance (spousal and child)",
+    "category": "substantive",
+    "description": "Work out spousal and child maintenance figures from the current rules.",
+    "icon": "<rect x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"2\"/><path d=\"M8 6h8\"/><path d=\"M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01\"/>",
+    "toolsCount": 2,
+    "practiceAreas": ["family-law"]
   }
 ]
