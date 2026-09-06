@@ -7,10 +7,6 @@ to discover and adopt into their daily workflow — organized **problem-first**:
 the task that eats their afternoon, not by product name. Neutral by design: it recommends
 multiple tools for each problem and does not endorse a single one.
 
-## Status
-
-Planning and design mockup. No production build yet.
-
 ## What's here
 
 | Path | What it is |
